@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+	  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/global.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/css3.css" type="text/css" media="screen">
+	  <title>Episteme: Demostrador del Bazar Ágil</title>
+
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/modernizr-2.5.3.js"></script>
+
+    <script type="text/javascript" src="js/jquery.user.js"></script>
+
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="display"></div>
+
+        <div id="top-bar">
+            <img class="left logo" src="images/episteme_logo.png" />
+            <br class="clear" />
+            <h1>Escoge qué empresas participarán de la oportunidad descubierta</h1>
+        </div><!-- end top-bar -->
+
+        <div id="main-content">
+            <div id="selection-panel">
+
+                <div class="panel" data-read-panel="true">
+                    <div class="service droppable" data-max-items="1" data-drag-out-kill="true" data-read-service="true" data-droppable="true" style="position: relative; ">
+                    </div>
+                    <span class="instructions" data-instructions="true">Drag App Here<br>(Offer)</span>
+                    <span class="instructions not-supported hide" data-instructions-not-supported="true">Not<br>Supported</span>
+                    <div class="cross hide" data-cant-use-read="true"><img src="/static/images/frontend/cross-large.png"></div>
+                </div>
+                <h2 class="to">→</h2>
+                <div class="panel" data-read-panel="true">
+                    <div class="service droppable" data-max-items="1" data-drag-out-kill="true" data-read-service="true" data-droppable="true" style="position: relative; ">
+                    </div>
+                    <span class="instructions" data-instructions="true">Drag App Here<br>(Partners)</span>
+                    <span class="instructions not-supported hide" data-instructions-not-supported="true">Not<br>Supported</span>
+                    <div class="cross hide" data-cant-use-read="true"><img src="/static/images/frontend/cross-large.png"></div>
+                </div>
+                <div class="clear"></div>
+
+            </div>
+            <div id="element-container">
+                <h1>Arrastra...</h1>
+                <div class="list">
+                    <div class="item company" data-capability="technical_memo admin_memo" draggable="true">
+                        <div class="imgwrap">
+                            <img src="data/images/logo1.png" />
+                        </div>
+                        <div class="titlebar">
+                            <h2>company 1</h2>
+                        </div>
+                    </div>
+                    <div class="item company" data-capability="technical_memo" draggable="true">
+                        <div class="imgwrap">
+                            <img src="data/images/logo2.png" />
+                        </div>
+                        <div class="titlebar">
+                            <h2>company 2</h2>
+                        </div>
+                    </div>
+                    <div class="item company" data-capability="economical_memo" draggable="true">
+                        <div class="imgwrap">
+                            <img src="data/images/logo3.png" />
+                        </div>
+                        <div class="titlebar">
+                            <h2>company 3</h2>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div><!-- end main-content -->
+
+        <div id="footer">
+            <p>Demostrador realizado por:</p>
+            <img class="left logo" src="images/gsi_logo_gray.png" />
+            <img class="left logo" src="images/GlobalMetanoia_logo_gray.png" />
+            <div class="clear"></div>
+        </div><!-- end footer -->
+
+    </div>
+</body>
+
+</html>
+
+
