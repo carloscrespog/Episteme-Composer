@@ -25,7 +25,7 @@ body {
   background-image: url('../images/tick.png');
   background-repeat:no-repeat;
 
-background-position:center;
+  background-position:center;
 
   
 }
@@ -197,7 +197,7 @@ background-position:center;
 #element-container {
   background-color: transparent;
   margin: 60px auto;
-  width: 700px;
+  width: 850px;
   min-height:200px;
 }
 
@@ -228,8 +228,9 @@ background-position:center;
   -webkit-box-shadow: 0 0 7px rgba(0,0,0,0.3);
   -moz-box-shadow: 0 0 7px rgba(0,0,0,0.3);
   box-shadow: 0 0 7px rgba(0,0,0,0.3);
-  margin: 0 10px;
+  margin: 0 10px 7px 10px;
   text-align: center;
+
 }
 
 #element-container .list .item:hover {
@@ -239,20 +240,37 @@ background-position:center;
   -webkit-box-shadow: 0 0 12px rgba(0,0,0,0.5);
   -moz-box-shadow: 0 0 12px rgba(0,0,0,0.5);
   box-shadow: 0 0 12px rgba(0,0,0,0.5);
-  margin: 0 10px;
+
   text-align: center;
   cursor: pointer;
 }
 
 #element-container .list .item .imgwrap{
-  padding: 10px 27px;
+  /*padding: 10px 27px;*/
+  padding:10px;
   border: 1px solid #AAA;
+  width:128px;
+  height:94px;
+  overflow: hidden;
+}
+
+#element-container .list .item .imgwrap img{
+  width:108px;
 }
 
 #element-container .list .item .titlebar{
   background: #333;
-  padding: 4px 0 7px;
+  padding: 6px 0 6px;
   color: #F0F0F0;
+  width:150px;
+  height: 15px;
+}
+
+#element-container .list .item .titlebar h2{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding:0 7px;
 }
 
 #element-container .list .item .subtitlebar{
@@ -296,7 +314,7 @@ background-position:center;
 #selection-panel .service .dropped { 
   /*float: left;
   display: block;
-*/
+  */
   background-color: #A8A;/*
   background-image: -webkit-gradient(linear, left top, left bottom, from(#A8A), to(white));
   background-image: -webkit-linear-gradient(top, #A8A, white);
@@ -310,8 +328,8 @@ background-position:center;
   box-shadow: 0 0 7px rgba(0,0,0,0.3);
   
   text-align: center;*/
-margin: 0 0px;
-border: none;
+  margin: 0 0px;
+  border: none;
 }
 .service .dropped .imgwrap{
   /*padding: 10px 27px;
