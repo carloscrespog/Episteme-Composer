@@ -150,7 +150,7 @@ function loadCompanies(){
   var query='http://apps.gsi.dit.upm.es/episteme/lmf/sparql/select?query=PREFIX+gsi%3A+%3Chttp%3A%2F%2Fwww.gsi.dit.upm.es%2F%3E+SELECT+DISTINCT+%3Fname+%3Factivity+%3Flogo++WHERE+%7B++++%3Fs+gsi%3AshortName+%3Fname.+++%3Fs+gsi%3Aactivity+%3Factivity.+++%3Fs+gsi%3Alogo+%3Flogo+%7D+ORDER+BY+%3Fname+&output=json';
   $.getJSON(query, function(data) {
     var list_companies='<li class="panel">';
-    var count=0;
+    var count=-1;
     $.each(data.results.bindings, function(key, val) {
       count++;
       if(count===15){
