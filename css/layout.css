@@ -165,7 +165,7 @@ body {
 }
 
 #selection-panel .service{
-  height: 117px;
+  height: 141px;
 }
 
 #selection-panel .service {
@@ -174,14 +174,14 @@ body {
   display: block;
   margin: 15px 15px 15px 15px;
   padding: 0;
-  width: 128px;
+  width: 147px;
 }
-
+/*
 #selection-panel h2 {
   font-size: 17px;
   text-align: center;
   padding: 10px 0 30px;
-}
+}*/
 #selection-panel .to {
   text-align: center;
   font-size: 50px;
@@ -213,7 +213,7 @@ body {
   margin: 30px 0;
 }
 
-#element-container .list .item {
+#element-container .list .item, #temp-placeholder .item{
   float: left;
   display: block;
 
@@ -233,7 +233,7 @@ body {
 
 }
 
-#element-container .list .item:hover {
+#element-container .list .item:hover,#temp-placeholder .item:hover {
   float: left;
   display: block;
   background-color: white;
@@ -245,7 +245,7 @@ body {
   cursor: pointer;
 }
 
-#element-container .list .item .imgwrap{
+#element-container .list .item .imgwrap,#temp-placeholder .item .imgwrap{
   /*padding: 10px 27px;*/
   padding:10px;
   border: 1px solid #AAA;
@@ -254,11 +254,11 @@ body {
   overflow: hidden;
 }
 
-#element-container .list .item .imgwrap img{
+#element-container .list .item .imgwrap img,#temp-placeholder .item .imgwrap img{
   width:108px;
 }
 
-#element-container .list .item .titlebar{
+#element-container .list .item .titlebar, #temp-placeholder .item .titlebar{
   background: #333;
   padding: 6px 0 6px;
   color: #F0F0F0;
@@ -266,7 +266,7 @@ body {
   height: 15px;
 }
 
-#element-container .list .item .titlebar h2{
+#element-container .list .item .titlebar h2, #temp-placeholder .item .titlebar h2{
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -331,16 +331,40 @@ body {
   margin: 0 0px;
   border: none;
 }
-.service .dropped .imgwrap{
-  /*padding: 10px 27px;
-  border: 1px solid #AAA;*/
+
+#selection-panel .dropped img{
+  width:108px;
 }
+#selection-panel .dropped .imgwrap{
+
+  height: 94px;
+}
+#selection-panel .panel-from .dropped img{
+
+  margin-top: -14px;
+
+  
+}
+.service .dropped .titlebar{
+  background: #333;
+  padding: 6px 0 6px;
+  color: #F0F0F0;
+  width:150px;
+  height: 15px;
+}
+
+.service .dropped .titlebar h2{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding:0 7px;
+}/*
 .service .dropped .titlebar{
   background: #000;
   height: 27px;
 
   color: #F0F0F0;
-}
+}*/
 .divrm {
   text-align: right;
 }

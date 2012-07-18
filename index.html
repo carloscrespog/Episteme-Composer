@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
     <link rel="stylesheet" href="css/layout.css" type="text/css" media="screen">
     <link rel="stylesheet" href="css/jquery.qtip.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/anythingslider.css" type="text/css" media="screen">
     
 	  <title>Episteme: Demostrador del Bazar Ágil</title>
 
@@ -15,6 +16,7 @@
     <script type="text/javascript" src="js/jquery-ui-1.8.20.custom.min.js"></script>
     <script type="text/javascript" src="js/jquery.user.js"></script>
     <script type="text/javascript" src="js/jquery.qtip.min.js"></script>
+    <script src="js/jquery.anythingslider.js" type="text/javascript" charset="utf-8"></script>
     
 
 </head>
@@ -22,7 +24,7 @@
 <body>
     <div id="container">
 
-        <div id="display"></div>
+        
 
         <div id="top-bar">
             <img class="left logo" src="images/episteme_logo.png" />
@@ -33,7 +35,7 @@
         <div id="main-content">
             <div id="selection-panel">
 
-                <div class="panel" data-read-panel="true">
+                <div class="panel panel-from" data-read-panel="true">
                     <div class="service droppable drop-offer" data-max-items="1" data-drag-out-kill="true" data-read-service="true" data-droppable="true" style="position: relative; " id="g1">
                     </div>
                     <span class="instructions offer" data-instructions="true">Arrastre aquí<br>(Ofertas)</span>
@@ -77,7 +79,7 @@
             </div>
             <div id="element-container">
                 <h1>Arrastra compañías</h1>
-                <div class="list list_companies">
+                <ul class="list list_companies" id="slider">
                     <div class="item company" data-capability="technical_memo admin_memo" id="i1">
                         <div class="imgwrap">
                             <img src="data/images/logo1.png" />
@@ -111,10 +113,12 @@
                         </div>
                     </div>
                     <div class="clear"></div>
-                </div>
+                </ul>
             </div>
             <div class="clear"></div>
         </div><!-- end main-content -->
+
+        
 
         <div id="footer">
             <p>Demostrador realizado por:</p>

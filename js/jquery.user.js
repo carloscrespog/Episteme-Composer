@@ -3,8 +3,14 @@
  * Developed by Gsi
  */
  $(document).ready(function() {
-  loadCompanies();
-  loadOffers();
+  $('#main-content').append('<div id="temp-placeholder"></div>');
+  loadCompanies(); //cargar compañias
+  loadOffers(); //cargar ofertas
+  /*
+   * Hacer droppables los huecos para las ofertas
+   * Mediante getCompanies se carga el número de huecos necesarios para
+   * cada oferta
+   */
   $('.drop-offer').droppable({
     accept: ".offer",
     activeClass: "drop-active",
@@ -20,7 +26,7 @@
       itemid=itemid.replace(/[a-z]+/,"");
       getCompanies(itemid); //ajax
       $('.list_offers').parent().hide();
-      $('.list_companies').parent().show();
+      $('.list_companies').parent().parent().parent().show();
     },activate: function(event,ui){
       $('.instructions.offer').hide();
     },deactivate: function(event,ui){
@@ -28,6 +34,9 @@
     }
   });
 });
+  /*
+   * Función que se usa para eliminar las ofertas que se sueltan en un hueco
+   */
  function remove(el) {
   $(el).parent().parent().remove();
   var htmlCompanies = '<div class="service droppable drop-company" data-max-items="1" data-drag-out-kill="true" data-read-service="true" data-droppable="true" style="position: relative; " id="g2"></div>';
@@ -35,14 +44,20 @@
   htmlCompanies = htmlCompanies + '<span class="instructions not-supported hide" data-instructions-not-supported="true">Not<br>Supported</span>';
   htmlCompanies = htmlCompanies + '<div class="cross hide" data-cant-use-read="true"><img src="/static/images/frontend/cross-large.png"></div>';
   $('.panel-to').html(htmlCompanies);
-  //dropifier();
   $('.list_offers').parent().show();
-  $('.list_companies').parent().hide();
+  $('.list_companies').parent().parent().parent().hide();
 }
+/*
+ * Función que se usa para eliminar las compañias que se sueltan en un hueco
+ */
 function removeCompany(el) {
   $(el).parent().parent().parent().droppable("enable");
   $(el).parent().parent().remove();
 }
+/*
+ * Función que se usa para cargar los huecos necesarios
+ * de una oferta
+ */
 function getCompanies(itemid){
   $.getJSON('data/offers/offers.js', function(data) {
     $('.panel-to').html('');
@@ -60,6 +75,10 @@ function getCompanies(itemid){
     });
   });
 }
+/*
+ * Hace droppable a un determinado div y hace que acepte unas determinadas clases
+ * se usa al cargar los huecos para las compañias
+ */
 function dropifier(mdiv,aClass){
   var mDraggable;
   $(eval(mdiv)).droppable({
@@ -87,6 +106,9 @@ function dropifier(mdiv,aClass){
     }
   });
 }
+/*
+ * Carga las ofertas, de momento en local, tambien pone las qtips
+ */
 function loadOffers(){
   $.getJSON('data/offers/offers.js', function(data) {
     $('.list_offers').html('');
@@ -98,80 +120,75 @@ function loadOffers(){
         list_offers= list_offers + val.capabilities[j]+' ';
       }
       list_offers= list_offers +'">';
-      list_offers= list_offers + '<div class="imgwrap"><img src="'+val.logo.src+'"/></div>';
+      list_offers= list_offers + '<div class="imgwrap"><img draggable="false" src="'+val.logo.src+'"/></div>';
       list_offers= list_offers + '<div class="titlebar"><h2>'+val.name+'</h2></div></div>';
       $('.list_offers').append(list_offers);
-      $('.item').draggable({
-        revert: true
-      });
-      $('.item').qtip({
-        content: {
-          attr:'data-capability'
-        },
-        style: {
-          classes: 'ui-tooltip-rounded ui-tooltip-shadow ui-tooltip-tipsy'
-        },
-        position:{
-          my:'bottom left',
-          at:'top right'
-        }
-      });
-      $('.list_companies').parent().hide();
+       // $('.item.offer').draggable({
+       //   revert: true
+       // });
+    $('.item').qtip({
+      content: {
+        attr:'data-capability'
+      },
+      style: {
+        classes: 'ui-tooltip-rounded ui-tooltip-shadow ui-tooltip-tipsy'
+      },
+      position:{
+        my:'bottom left',
+        at:'top right'
+      }
     });
+    $('.list_companies').parent().hide();
+  });
   });
 }
-function loadCompaniesLocal(){
-  $.getJSON('data/companies/companies.js', function(data) {
-    var list_companies='';
-    $.each(data.companies, function(key, val) {
-      list_companies= list_companies + '<div class="item company ';
-      for(var i in val.capabilities){
-        //console.log(val.capabilities[i]);
-        list_companies= list_companies + val.capabilities[i]+' ';
-      }
-      list_companies= list_companies + '" id="i'+key+'" '   ;
-      list_companies= list_companies + 'data-capability="';
-      for(var j in val.capabilities){
-        //console.log(val.capabilities[i]);
-        list_companies= list_companies + val.capabilities[j]+' ';
-      }
-      list_companies= list_companies +'">';
-      list_companies= list_companies + '<div class="imgwrap"><img src="'+val.logo.src+'"/></div>';
-      list_companies= list_companies + '<div class="titlebar"><h2>'+val.name+'</h2></div></div>';
-    });
-    $('.list_companies').html(list_companies);
-    $('.item').draggable({
-      revert: true,
-      revertDuration: 500
-    });
-  });
-}
+/*
+ * Carga las compañias, mediante lmf
+ * las capabilities se cargan hardcodeadas
+ */
 function loadCompanies(){
-    var query='http://apps.gsi.dit.upm.es/episteme/lmf/sparql/select?query=PREFIX+gsi%3A+%3Chttp%3A%2F%2Fwww.gsi.dit.upm.es%2F%3E+SELECT+DISTINCT+%3Fname+%3Factivity+%3Flogo++WHERE+%7B++++%3Fs+gsi%3AshortName+%3Fname.+++%3Fs+gsi%3Aactivity+%3Factivity.+++%3Fs+gsi%3Alogo+%3Flogo+%7D+ORDER+BY+%3Fname+&output=json';
+  var query='http://apps.gsi.dit.upm.es/episteme/lmf/sparql/select?query=PREFIX+gsi%3A+%3Chttp%3A%2F%2Fwww.gsi.dit.upm.es%2F%3E+SELECT+DISTINCT+%3Fname+%3Factivity+%3Flogo++WHERE+%7B++++%3Fs+gsi%3AshortName+%3Fname.+++%3Fs+gsi%3Aactivity+%3Factivity.+++%3Fs+gsi%3Alogo+%3Flogo+%7D+ORDER+BY+%3Fname+&output=json';
   $.getJSON(query, function(data) {
-    var list_companies='';
+    var list_companies='<li class="panel">';
+    var count=0;
     $.each(data.results.bindings, function(key, val) {
+      count++;
+      if(count===15){
+        count=0;
+        list_companies= list_companies + '</li><li class="panel">';
+      }
       list_companies= list_companies + '<div class="item company ';
-      //for(var i in val.capabilities){
-        //console.log(val.capabilities[i]);
-        list_companies= list_companies + 'technical_memo admin_memo';
-      //}
+
+      list_companies= list_companies + 'technical_memo admin_memo';
+
       list_companies= list_companies + '" id="i'+key+'" '   ;
       list_companies= list_companies + 'data-capability="';
-      //for(var j in val.capabilities){
-        //console.log(val.capabilities[i]);
-        list_companies= list_companies + 'technical_memo admin_memo"';
-        list_companies= list_companies + 'data-description="'+val.activity.value+'"';
-      //}
+
+      list_companies= list_companies + 'technical_memo admin_memo"';
+      list_companies= list_companies + 'data-description="'+val.activity.value+'"';
+
       list_companies= list_companies +'">';
-      list_companies= list_companies + '<div class="imgwrap"><img src="'+val.logo.value+'"/></div>';
+      list_companies= list_companies + '<div class="imgwrap"><img draggable="false" src="'+val.logo.value+'"/></div>';
       list_companies= list_companies + '<div class="titlebar"><h2>'+val.name.value+'</h2></div></div>';
     });
+    list_companies= list_companies + '</li>';
     $('.list_companies').html(list_companies);
-    $('.list_companies').append('<div class="clear"></div>');
+
+    /*
+     * Usamos el helper clone para que no desaparezca al arrastrar
+     * appendTo se encarga de que el draggable pueda salir de la caja del slider
+     * usamos revert  invalid porque queremos que vuelva al dejar fuera del hueco
+     */
     $('.item').draggable({
-      revert: true,
-      revertDuration: 500
+      revert: 'invalid',
+      revertDuration: 500,
+      appendTo: '#temp-placeholder',
+      helper: 'clone',
+      scroll: true
+    });
+    $('#slider').anythingSlider({
+      buildStartStop:false,
+      hashTags:false
     });
   });
 }
