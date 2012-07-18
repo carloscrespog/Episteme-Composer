@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es">
+
+<head>
+	  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/layout.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/jquery.offers.css" type="text/css" media="screen">
+	  <title>Episteme: Demostrador del Bazar Ágil</title>
+
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.flot.js"></script>
+    <script type="text/javascript" src="js/jquery.flot.highlighter.js"></script>
+    <script type="text/javascript" src="js/jquery.flot.spider.js"></script>
+    <script type="text/javascript" src="js/jquery.flot.debug.js"></script>
+    <script type="text/javascript" src="js/jquery.semmf.user.js"></script>
+    <script type="text/javascript" src="js/jquery.semmf.slider.js"></script>
+    <script type="text/javascript" src="js/jquery.semmf.offers.js"></script>
+
+    </script>
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="top-bar">
+            <img class="left logo" src="images/episteme_logo.png" />
+            <br class="clear" />
+            <!--<h1>Establece las preferencias de búsqueda y encuentra la empresa idónea</h1>-->
+        </div><!-- end top-bar -->
+
+        <div id="main-content">
+            <div id="selection-panel">
+                <div id="title-bar">
+                    <div id="new_offer_entry" class="add-arrow"></div>
+                    <h2>Selecciona habilidades y grado de competencia</h2>
+                    <div class="clear"></div>
+                </div>
+                <form id="skills-selection" action="#" method="post">
+                    <div class="skill-level-closure">
+                        <label for="skill1">Requisito:</label>
+                        <select name="skill1">
+                            <option value="Web_programming">Programación Web</value>
+                            <option value="Graphic_applications">Diseño Gráfico</value>
+                            <option value="Office_applications">Aplicaciones Ofimáticas</value>
+                            <option value="Relational_databases">BBDD Relacionales</value>
+                            <option value="Oracle">Oracle</value>
+                            <option value="JavaScript">JavaScript</value>
+                            <option value="VisualBasic">VisualBasic</value>
+                            <option value="VisualBasic">Java</value>
+                        </select>
+                        <label for="level1">Grado de competencia:</label>
+                        <select name="level1">
+                            <option value="Expert">Experto</value>
+                            <option value="Advanced">Avanzado</value>
+                            <option value="Intermediate">Intermedio</value>
+                            <option value="Beginner">Básico</value>
+                        </select>
+                    </div>
+                    <div class="skill-level-closure">
+                        <label for="skill2">Requisito:</label>
+                        <select name="skill2">
+                            <option value="JavaScript">JavaScript</value>
+                            <option value="Graphic_applications">Diseño Gráfico</value>
+                            <option value="Office_applications">Aplicaciones Ofimáticas</value>
+                            <option value="Relational_databases">BBDD Relacionales</value>
+                            <option value="Oracle">Oracle</value>
+                            <option value="Web_programming">Programación Web</value>
+                            <option value="VisualBasic">VisualBasic</value>
+                            <option value="VisualBasic">Java</value>
+                        </select>
+                        <label for="level2">Grado de competencia:</label>
+                        <select name="level2">
+                            <option value="Expert">Experto</value>
+                            <option value="Advanced">Avanzado</value>
+                            <option value="Intermediate">Intermedio</value>
+                            <option value="Beginner">Básico</value>
+                        </select>
+                    </div>
+                    <div class="skill-level-closure">
+                        <label for="skill3">Requisito:</label>
+                        <select name="skill3">
+                            <option value="VisualBasic">Java</value>
+                            <option value="Graphic_applications">Diseño Gráfico</value>
+                            <option value="Office_applications">Aplicaciones Ofimáticas</value>
+                            <option value="Relational_databases">BBDD Relacionales</value>
+                            <option value="Oracle">Oracle</value>
+                            <option value="Web_programming">Programación Web</value>
+                            <option value="JavaScript">JavaScript</value>
+                            <option value="VisualBasic">VisualBasic</value>
+                        </select>
+                        <label for="level3">Grado de competencia:</label>
+                        <select name="level3">
+                            <option value="Expert">Experto</value>
+                            <option value="Advanced">Avanzado</value>
+                            <option value="Intermediate">Intermedio</value>
+                            <option value="Beginner">Básico</value>
+                        </select>
+                    </div>
+                    <button type="submit">Encontrar</button>
+                </form>
+
+            </div>
+            <div id="element-container">
+                <div class="rght-column">
+                  <h2>Requisitos</h2>
+                  <div id="matching-search-criteria"></div>
+                  <h2>Resultado</h2>
+                  <div id="matching-chart">
+                      <div id="matching-chart-legend"></div>
+                      <div id="matching-chart-placeholder"></div>
+                  </div>
+                </div>
+                <div class="main-column">
+                  <div class="back-arrow"></div>
+                  <div id="report-container">
+                      <h2>Candidatos</h2>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div><!-- end main-content -->
+
+        <div id="footer">
+            <p>Demostrador realizado por:</p>
+            <img class="left logo" src="images/gsi_logo_gray.png" />
+            <img class="left logo" src="images/GlobalMetanoia_logo_gray.png" />
+            <div class="clear"></div>
+        </div><!-- end footer -->
+
+    </div>
+</body>
+
+</html>
+
+
