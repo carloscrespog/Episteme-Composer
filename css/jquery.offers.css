@@ -1,0 +1,18 @@
+.remove-line {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  font-size: 16px;
+  font-family: verdana, 'Open Sans', arial, helvetica;
+  cursor: pointer;
+  color: #79A04B;
+  margin-left: 4px;
+  visibility: hidden;
+}
+.skill-level-closure:hover .remove-line {
+  visibility: visible;
+}
+.skill-level-closure:hover .remove-line:hover {
+  color: white;
+  background-color: #79A04B;
+}
