@@ -5,7 +5,7 @@
 jQuery(function ($) {
 
     /* Hide element container until it has to be shown */
-//    $('#element-container').hide();
+    $('#matching-chart').hide();
 
 
     /* Load data service when submiting the form */
@@ -15,17 +15,17 @@ jQuery(function ($) {
             url: "./data/mock/data.js",
             dataType: 'json',
             data: $(this).serialize()
-        }).success(function (data) { serviceCall(data) });
+        }).success(function (data) { serviceCall(data);});
 
         return false; //prevent default
-    })
+    });
 
 
 
     /**
      * Attach hover events -mouseenter, mouseleave- to result cards so the 
      * corresponding serie is highlighted in the chart when they are hovered.
-     * 
+     *
      * Event used has namespace so they can safely removed if needed.
      * It has been used on function to bind them because these cards are 
      * dinamically created from the data read from the service.
@@ -50,6 +50,14 @@ jQuery(function ($) {
      */
     $('#main-content').bind('clear.chart', function(){
         $(this).find('#matching-chart').children().empty();
+        $(this).find('#matching-chart').hide();
+    });
+    /**
+     * This removes the chart. This is used by other scripts so it should 
+     * be used
+     */
+    $('#main-content').bind('clear.offer', function(){
+        $(this).find('#matching-search-criteria ol').remove();
     });
 
     /* Create variables used to print radar chart */
@@ -113,12 +121,12 @@ jQuery(function ($) {
      *
      * The data is as shown:
      *
-     * {"offer": 
-     *    [{"skill":"Base de datos SQL", "level":"Intermedio"}, 
-     *     {"skill":"JavaScript", "level":"Experto"}, 
+     * {"offer":
+     *    [{"skill":"Base de datos SQL", "level":"Intermedio"},
+     *     {"skill":"JavaScript", "level":"Experto"},
      *     {"skill":"Java", "level":"Avanzado"}],
      *  "candidates":
-     *    [{"company":"UPM", "global_value":0.9, 
+     *    [{"company":"UPM", "global_value":0.9,
      *      "results" : [{"skill":"Oracle", "level":"Experto", "value":1}, 
      *                   {"skill":"VBScript", "level":"Intermedio", "value":0.55}, 
      *                   {"skill":"VisualBasic", "level":"Avanzado", "value":0.7}]}]
@@ -139,7 +147,7 @@ jQuery(function ($) {
         var labels = new Array();
 
         // read the offer and generate the html
-        var offer = "<ol>"
+        var offer = "<ol>";
         var offer_rq = data.offer;
         for (var rq in offer_rq) {
             var req = offer_rq[rq];

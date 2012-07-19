@@ -4,7 +4,7 @@
  */
 jQuery(function ($) {
 
-    /* 
+    /*
      * Prepare de sliding form: This shows a sliding effect when submiting the
      * form, and when coming backwards.
      * - It does not use any plugin
@@ -39,7 +39,7 @@ jQuery(function ($) {
          * file */
         $('#main-content').trigger('clear.reports');
         $('#main-content').trigger('clear.chart');
-
+        $('#main-content').trigger('clear.offer');
 //        $('#report-container .matching-report').remove);
 //        $('#matching-chart').children().empty();
     });
