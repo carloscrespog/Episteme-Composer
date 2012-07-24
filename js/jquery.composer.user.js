@@ -5,8 +5,8 @@
  $(document).ready(function() {
   $('#main-content').append('<div id="temp-placeholder"></div>');
     loadOffers(); //cargar ofertas
-    loadCompanies(); //cargar compañias
-    
+    //loadCompanies(); //cargar compañias
+
   /*
    * Hacer droppables los huecos para las ofertas
    * Mediante getCompanies se carga el número de huecos necesarios para
@@ -16,6 +16,7 @@
     accept: ".offer",
     activeClass: "drop-active",
     drop: function(event, ui) {
+
       $('.instructions.offer').empty();
       var item = ui.draggable.html();
       var itemid = ui.draggable.attr("id");
@@ -25,9 +26,9 @@
       html = html + '</div><div>'+item+'</div>';
       $(this).append(html);
       itemid=itemid.replace(/[a-z]+/,"");
-      getCompanies(itemid); //ajax
-      $('.list_offers').parent().hide();
       $('.list_companies').parent().parent().parent().show();
+      getCompanies(itemid); //ajax
+      
     },activate: function(event,ui){
       $('.instructions.offer').hide();
     },deactivate: function(event,ui){
@@ -61,7 +62,12 @@
  */
  function getCompanies(itemid){
   $.getJSON('data/offers/offers.js', function(data) {
+    $('.list_offers').parent().hide();
+    
+    $('.company').css('opacity','0.25');
     $('.panel-to').html('');
+    var mCapabilities=new Array();
+
     $.each(data.offers[itemid].capabilities, function(key, val) {
       var htmlCompanies='';
       htmlCompanies = htmlCompanies + '<div class="service droppable drop-company" data-max-items="1" data-drag-out-kill="true" data-read-service="true" data-droppable="true" style="position: relative; " id="o'+key+'">';
@@ -69,12 +75,28 @@
       htmlCompanies = htmlCompanies + '<span class="instructions not-supported hide" data-instructions-not-supported="true">Not<br>Supported</span>';
       htmlCompanies = htmlCompanies + '<div class="cross hide" data-cant-use-read="true"><img src="/static/images/frontend/cross-large.png"></div>';
       $('.panel-to').append(htmlCompanies);
+      //$('.panel-to').hide().append(htmlCompanies).show('fast');
+
       var mdiv='\'#o'+key+'\'';
-      var mClass='\".'+val+'\"';
+      var classType= val;
+      classType=classType.split(' ')[0]+'_'+classType.split(' ')[1];
+      var mClass='\".'+classType+'\"';
       console.log(eval(mdiv)+' y '+mClass);
       dropifier(mdiv,mClass);
+      $(eval(mClass)).css('opacity','1');
+      // var mCapability=replaceAll(val,"ñ",'%F1');
+      // mCapability=replaceAll(mCapability,' ','+');
+      // mCapability=replaceAll(mCapability,'ó','%F3');
+      // mCapabilities[key]=mCapability;
+      mCapabilities[key]=val;
+      // console.log (mCapabilities[key]+ ' numero: '+key);
     });
-  });
+  // console.log("llamando loadCompanies");
+  loadCompanies(mCapabilities);
+  //$('.list_companies').parent().parent().parent().show();
+  // console.log("llamado loadCompanies");
+
+});
 }
 /*
  * Hace droppable a un determinado div y hace que acepte unas determinadas clases
@@ -98,7 +120,7 @@
       html = html + '</div><div>'+item+'</div>';
       $(this).append(html);
       $(this).droppable("disable");
-      loadCompanies();
+      //loadCompanies();
       $('.list_companies').parent().show();
     },activate: function(event,ui){
       $('.instructions.company').hide();
@@ -118,7 +140,9 @@
       list_offers= list_offers + '<div class="item offer" id="o'+key+'" ';
       list_offers= list_offers + 'data-capability="';
       for(var j in val.capabilities){
-        list_offers= list_offers + val.capabilities[j]+' ';
+        var classType= val.capabilities[j];
+        classType=classType.split(' ')[0]+'_'+classType.split(' ')[1];
+        list_offers= list_offers + classType+' ';
       }
       list_offers= list_offers +'">';
       list_offers= list_offers + '<div class="imgwrap"><img draggable="false" src="'+val.logo.src+'"/></div>';
@@ -131,39 +155,76 @@
     $('.list_companies').parent().hide();
   });
     $('list_offers').append('<div class="clear"></div>');
+    $('.item').draggable({
+      revert: 'invalid',
+      revertDuration: 500,
+      appendTo: '#temp-placeholder',
+      helper: 'clone',
+      scroll: true
+    });
   });
 }
 /*
  * Carga las compañias, mediante lmf
  * las capabilities se cargan hardcodeadas
  */
- function loadCompanies(){
-  var query='http://apps.gsi.dit.upm.es/episteme/lmf/sparql/select?query=PREFIX+gsi%3A+%3Chttp%3A%2F%2Fwww.gsi.dit.upm.es%2F%3E+SELECT+DISTINCT+%3Fname+%3Factivity+%3Flogo++WHERE+%7B++++%3Fs+gsi%3AshortName+%3Fname.+++%3Fs+gsi%3Aactivity+%3Factivity.+++%3Fs+gsi%3Alogo+%3Flogo+%7D+ORDER+BY+%3Fname+&output=json';
+ function loadCompanies(capabilities){
+  var query='http://apps.gsi.dit.upm.es/episteme/lmf/sparql/select?query=PREFIX+gsi%3A+%3Chttp%3A%2F%2Fwww.gsi.dit.upm.es%2F%3E+SELECT+DISTINCT+%3Fname+%3Factivity+%3Flogo+%3Ftype+WHERE+%7B++++%3Fs+gsi%3AshortName+%3Fname.+++%3Fs+gsi%3Aactivity+%3Factivity.+++%3Fs+gsi%3Alogo+%3Flogo.+++%3Fs+gsi%3Atype+%3Ftype+%7D+ORDER+BY+%3Ftype+&output=json';
+  //var oldQuery='http://apps.gsi.dit.upm.es/episteme/lmf/sparql/select?query=PREFIX+gsi%3A+%3Chttp%3A%2F%2Fwww.gsi.dit.upm.es%2F%3E+SELECT+DISTINCT+%3Fname+%3Factivity+%3Flogo++WHERE+%7B++++%3Fs+gsi%3AshortName+%3Fname.+++%3Fs+gsi%3Aactivity+%3Factivity.+++%3Fs+gsi%3Alogo+%3Flogo+%7D+ORDER+BY+%3Fname+&output=json';
+  // var queryInit='http://apps.gsi.dit.upm.es/episteme/lmf/sparql/select?query=PREFIX+gsi%3A+%3Chttp%3A%2F%2Fwww.gsi.dit.upm.es%2F%3E+SELECT+DISTINCT+%3Fname+%3Factivity+%3Flogo+%3Ftype+WHERE+%7B';
+  // var queryAtom='';
+  // if(capabilities.length <=1){
+  //   queryAtom='+%3Fs+gsi%3AshortName+%3Fname.+++%3Fs+gsi%3Aactivity+%3Factivity.+++%3Fs+gsi%3Alogo+%3Flogo.+++%3Fs+gsi%3Atype+%3Ftype.+++%3Fs+gsi%3Atype+%22'+capabilities[0]+'%22';
+
+  // }else{
+  //   for( var j in capabilities){
+  //     queryAtom= queryAtom+ '+%7B++++++%3Fs+gsi%3AshortName+%3Fname.+++%3Fs+gsi%3Aactivity+%3Factivity.+++%3Fs+gsi%3Alogo+%3Flogo.+++%3Fs+gsi%3Atype+%3Ftype.+++%3Fs+gsi%3Atype+%22';
+  //     queryAtom= queryAtom+ capabilities[j];
+  //     queryAtom= queryAtom+ '%22%7D';
+  //     if(j!=(capabilities.length-1)){
+  //       queryAtom= queryAtom+'UNION';
+  //     }
+  //   }
+  // }
+  // var queryLast='%7D+ORDER+BY+%3Ftype&output=json';
+
+
+  // var query=queryInit+queryAtom+queryLast;
+  // console.log('Query realizada: '+query);
   $.getJSON(query, function(data) {
+
     var list_companies='<li class="panel">';
     var count=-1;
     $.each(data.results.bindings, function(key, val) {
-      count++;
-      if(count===15){
-        count=0;
-        list_companies= list_companies + '</li><li class="panel">';
+      for(var j in capabilities){
+        if(val.type.value==capabilities[j]){
+          count++;
+          if(count===15){
+            count=0;
+            list_companies= list_companies + '</li><li class="panel">';
+          }
+          list_companies= list_companies + '<div class="item company ';
+          var classType= val.type.value;
+          classType=classType.split(' ')[0]+'_'+classType.split(' ')[1];
+          list_companies= list_companies + classType;
+
+          list_companies= list_companies + '" id="i'+key+'" '   ;
+          list_companies= list_companies + 'data-capability="';
+
+          list_companies= list_companies + val.type.value+'"';
+          list_companies= list_companies + 'data-description="'+val.activity.value+'"';
+
+          list_companies= list_companies +'>';
+          list_companies= list_companies + '<div class="imgwrap"><img draggable="false" src="'+val.logo.value+'"/></div>';
+          list_companies= list_companies + '<div class="titlebar"><h2>'+val.name.value+'</h2></div></div>';
+        }
       }
-      list_companies= list_companies + '<div class="item company ';
-
-      list_companies= list_companies + 'technical_memo admin_memo';
-
-      list_companies= list_companies + '" id="i'+key+'" '   ;
-      list_companies= list_companies + 'data-capability="';
-
-      list_companies= list_companies + 'technical_memo admin_memo"';
-      list_companies= list_companies + 'data-description="'+val.activity.value+'"';
-
-      list_companies= list_companies +'>';
-      list_companies= list_companies + '<div class="imgwrap"><img draggable="false" src="'+val.logo.value+'"/></div>';
-      list_companies= list_companies + '<div class="titlebar"><h2>'+val.name.value+'</h2></div></div>';
+      
     });
-    list_companies= list_companies + '</li>';
-    $('.list_companies').html(list_companies);
+list_companies= list_companies + '</li>';
+$('.list_companies').parent().parent().parent().show();
+$('.list_companies').html(list_companies);
+
 
     /*
      * Usamos el helper clone para que no desaparezca al arrastrar
@@ -203,4 +264,11 @@
       }
     });
    });
+
 }
+function replaceAll( text, busca, reemplaza ){
+  while (text.toString().indexOf(busca) != -1)
+    text = text.toString().replace(busca,reemplaza);
+  return text;
+}
+
