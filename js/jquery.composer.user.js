@@ -64,7 +64,7 @@
   $.getJSON('data/offers/offers.js', function(data) {
     $('.list_offers').parent().hide();
     
-    $('.company').css('opacity','0.25');
+    // $('.company').css('opacity','0.25');
     $('.panel-to').html('');
     var mCapabilities=new Array();
 
@@ -83,7 +83,7 @@
       var mClass='\".'+classType+'\"';
       console.log(eval(mdiv)+' y '+mClass);
       dropifier(mdiv,mClass);
-      $(eval(mClass)).css('opacity','1');
+      // $(eval(mClass)).css('opacity','1');
       // var mCapability=replaceAll(val,"ñ",'%F1');
       // mCapability=replaceAll(mCapability,' ','+');
       // mCapability=replaceAll(mCapability,'ó','%F3');
@@ -222,8 +222,10 @@
       
     });
 list_companies= list_companies + '</li>';
-$('.list_companies').parent().parent().parent().show();
+console.log('I m showing, I m showing!');
+
 $('.list_companies').html(list_companies);
+//$('.list_companies').parent().parent().parent().css('height','500px');
 
 
     /*
@@ -242,6 +244,7 @@ $('.list_companies').html(list_companies);
       buildStartStop:false,
       hashTags:false
     });
+     $('.list_companies').parent().parent().parent().show();
      $('.item').qtip({
       content: {
         title: {
@@ -270,5 +273,8 @@ function replaceAll( text, busca, reemplaza ){
   while (text.toString().indexOf(busca) != -1)
     text = text.toString().replace(busca,reemplaza);
   return text;
+}
+function showIt(){
+  $('.list_companies').parent().parent().parent().show();
 }
 
