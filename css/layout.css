@@ -441,14 +441,13 @@ body {
     font-weight: bold;
     font-size: 20px;
     position: relative;
-    top: -7px;
+    right: 2px;
+    color:#FFF;
   }
 
+ 
   .remove:hover {
-    color: #999;
-  }
-  .remove:hover {
-    color: #999;
+    color: #79A04B;
   }
 
   #selection-panel form button:hover{

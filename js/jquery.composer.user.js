@@ -2,6 +2,7 @@
  * Functionality for Episteme's Bazar Agil
  * Developed by Gsi
  */
+     var mCapabilities=new Array();
  $(document).ready(function() {
   $('#main-content').append('<div id="temp-placeholder"></div>');
     loadOffers(); //cargar ofertas
@@ -54,7 +55,13 @@
  */
  function removeCompany(el) {
   $(el).parent().parent().parent().droppable("enable");
+  var cap=$(el).parent().parent().parent().attr('data-capability');
+  var index=$(el).parent().parent().parent().attr('id');
+  console.log('------------Estamos en el div   '+index.replace('o',''));
+  mCapabilities[eval(index)]=cap;
+  loadCompanies();
   $(el).parent().parent().remove();
+
 }
 /*
  * Función que se usa para cargar los huecos necesarios
@@ -66,11 +73,11 @@
     
     // $('.company').css('opacity','0.25');
     $('.panel-to').html('');
-    var mCapabilities=new Array();
+    // var mCapabilities=new Array();
 
     $.each(data.offers[itemid].capabilities, function(key, val) {
       var htmlCompanies='';
-      htmlCompanies = htmlCompanies + '<div class="service droppable drop-company" data-max-items="1" data-drag-out-kill="true" data-read-service="true" data-droppable="true" style="position: relative; " id="o'+key+'">';
+      htmlCompanies = htmlCompanies + '<div class="service droppable drop-company" data-max-items="1" data-drag-out-kill="true" data-read-service="true" data-droppable="true" data-capability="'+val+'" style="position: relative; " id="o'+key+'">';
       htmlCompanies = htmlCompanies + '<span class="instructions company" data-instructions="true">Arrastre aqu&iacute;<br>(Compañ&iacute;as)</span></div>'+val;
       htmlCompanies = htmlCompanies + '<span class="instructions not-supported hide" data-instructions-not-supported="true">Not<br>Supported</span>';
       htmlCompanies = htmlCompanies + '<div class="cross hide" data-cant-use-read="true"><img src="/static/images/frontend/cross-large.png"></div>';
@@ -82,7 +89,7 @@
       classType=classType.split(' ')[0]+'_'+classType.split(' ')[1];
       var mClass='\".'+classType+'\"';
       console.log(eval(mdiv)+' y '+mClass);
-      dropifier(mdiv,mClass);
+      dropifier(mdiv,mClass,key);
       // $(eval(mClass)).css('opacity','1');
       // var mCapability=replaceAll(val,"ñ",'%F1');
       // mCapability=replaceAll(mCapability,' ','+');
@@ -92,7 +99,7 @@
       // console.log (mCapabilities[key]+ ' numero: '+key);
     });
   // console.log("llamando loadCompanies");
-  loadCompanies(mCapabilities);
+  loadCompanies();
   //$('.list_companies').parent().parent().parent().show();
   // console.log("llamado loadCompanies");
 
@@ -102,7 +109,7 @@
  * Hace droppable a un determinado div y hace que acepte unas determinadas clases
  * se usa al cargar los huecos para las compañias
  */
- function dropifier(mdiv,aClass){
+ function dropifier(mdiv,aClass,key){
   var mDraggable;
   $(eval(mdiv)).droppable({
     accept: eval(aClass),
@@ -120,7 +127,9 @@
       html = html + '</div><div>'+item+'</div>';
       $(this).append(html);
       $(this).droppable("disable");
-      //loadCompanies();
+      console.log('Esta es la key: '+key);
+      mCapabilities[key]='x';
+      loadCompanies();
       $('.list_companies').parent().show();
     },activate: function(event,ui){
       $('.instructions.company').hide();
@@ -168,7 +177,7 @@
  * Carga las compañias, mediante lmf
  * las capabilities se cargan hardcodeadas
  */
- function loadCompanies(capabilities){
+ function loadCompanies(){
   var query='http://apps.gsi.dit.upm.es/episteme/lmf/sparql/select?query=PREFIX+gsi%3A+%3Chttp%3A%2F%2Fwww.gsi.dit.upm.es%2F%3E+SELECT+DISTINCT+%3Fname+%3Factivity+%3Flogo+%3Ftype+WHERE+%7B++++%3Fs+gsi%3AshortName+%3Fname.+++%3Fs+gsi%3Aactivity+%3Factivity.+++%3Fs+gsi%3Alogo+%3Flogo.+++%3Fs+gsi%3Atype+%3Ftype+%7D+ORDER+BY+%3Ftype+&output=json';
   //var oldQuery='http://apps.gsi.dit.upm.es/episteme/lmf/sparql/select?query=PREFIX+gsi%3A+%3Chttp%3A%2F%2Fwww.gsi.dit.upm.es%2F%3E+SELECT+DISTINCT+%3Fname+%3Factivity+%3Flogo++WHERE+%7B++++%3Fs+gsi%3AshortName+%3Fname.+++%3Fs+gsi%3Aactivity+%3Factivity.+++%3Fs+gsi%3Alogo+%3Flogo+%7D+ORDER+BY+%3Fname+&output=json';
   // var queryInit='http://apps.gsi.dit.upm.es/episteme/lmf/sparql/select?query=PREFIX+gsi%3A+%3Chttp%3A%2F%2Fwww.gsi.dit.upm.es%2F%3E+SELECT+DISTINCT+%3Fname+%3Factivity+%3Flogo+%3Ftype+WHERE+%7B';
@@ -196,8 +205,8 @@
     var list_companies='<li class="panel">';
     var count=-1;
     $.each(data.results.bindings, function(key, val) {
-      for(var j in capabilities){
-        if(val.type.value==capabilities[j]){
+      for(var j in mCapabilities){
+        if(val.type.value==mCapabilities[j]){
           count++;
           if(count===15){
             count=0;
@@ -222,7 +231,6 @@
       
     });
 list_companies= list_companies + '</li>';
-console.log('I m showing, I m showing!');
 
 $('.list_companies').html(list_companies);
 //$('.list_companies').parent().parent().parent().css('height','500px');
