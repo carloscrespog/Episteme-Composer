@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es">
+
+<head>
+
+	  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/layout.css" type="text/css" media="screen">
+    <link href="css/smart_wizard.css" rel="stylesheet" type="text/css">
+    <link href="css/jquery-ui-1.8.22.custom.css" rel="stylesheet" type="text/css">
+    
+    
+	  <title>Asistente de creación de ofertas</title>
+
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.22.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery.wizard.user.js"></script>
+    <script type="text/javascript" src="js/jquery.smartWizard-2.0.min.js"></script>    
+
+</head>
+
+<body>
+     
+    <div id="container">
+
+        <div id="top-bar">
+            <img class="left logo" src="images/episteme_logo.png" />
+            <br class="clear" />
+            <!--<h1>Escoge qué empresas participarán de la oportunidad descubierta</h1>-->
+        </div><!-- end top-bar -->
+
+        <div id="main-content">
+            <form id="skills-selection" action="#" method="post" style="display: inline-block;margin-bottom: 60px;">
+                <div id="wizard" class="swMain">
+                  <ul>
+                    <li><a href="#step-1">
+                          <label class="stepNumber">1</label>
+                          <span class="stepDesc">
+                             Información<br />
+                             <small>Información general</small>
+                          </span>
+                      </a></li>
+                    <li><a href="#step-2">
+                          <label class="stepNumber">2</label>
+                          <span class="stepDesc">
+                             Administrativos<br />
+                             <small>Campos administrativos</small>
+                          </span>
+                      </a></li>
+                    <li><a href="#step-3">
+                          <label class="stepNumber">3</label>
+                          <span class="stepDesc">
+                             Compañías<br />
+                             <small>Compañías requeridas</small>
+                          </span>                   
+                       </a></li>
+                    <li><a href="#step-4">
+                          <label class="stepNumber">4</label>
+                          <span class="stepDesc">
+                             Resumen<br />
+                             <small>Resumen de la oferta creada</small>
+                          </span>                   
+                      </a></li>
+                  </ul>
+                  
+                      <div id="step-1">   
+                          <h2 class="StepTitle">Información general sobre la oferta:</h2>
+                          <div class="skill-level-closure">
+                            <label for="offerName">Nombre de la oferta:  </label>
+                            <input type="text" name="offerName" value="" class="txtBox">
+                          </div>
+                          <div class="skill-level-closure">
+                            <label for="description">Descripción de la oferta:  </label>
+                            <input type="text" name="description" value="" class="txtBox">
+                          </div>
+                          <div class="skill-level-closure">
+                            <label for="employer">Contratante: </label>
+                            <input type="text" name="employer" value="" class="txtBox">
+                          </div>
+                          <div class="skill-level-closure">
+                            <label for="remuneration">Remuneración:</label>
+
+                            <input type="text" name="remuneration" id="remuneration" value="" class="txtBox">
+                            <div id="slider-range"></div>
+                          </div>
+
+                      </div>
+                      <div id="step-2">
+                          <h2 class="StepTitle">Datos administrativos:</h2> 
+                          <div class="skill-level-closure">
+                            <label for="localization">Localización:  </label>
+                            <input type="text" name="localization" value="" class="txtBox">
+                          </div>
+                          <div class="skill-level-closure">
+                            <label for="budget">Presupuesto:  </label>
+                            <input type="text" name="budget" id="budget" value="" class="txtBox">
+                            <div id="slider"></div>
+                          </div>
+                          <div class="skill-level-closure">
+                            <label for="date">Fecha de finalización: </label>
+                            <input type="text" name="date" id="datepicker" value="" >
+                        </div>
+                      </div>                      
+                      <div id="step-3">
+                          <h2 class="StepTitle">Compañías necesarias para su oferta</h2>   
+
+                          <div class="skill-level-closure">
+                          <label for="type">Tipo de empresa:  </label>
+                          <div id="checkBoxes">
+                          <input name="type" type="checkbox" value="Asociación de Empresa">
+                            Asociación de Empresa
+                          <input name="type" type="checkbox" value="Centro Privado de Investigación">
+                            Centro Privado de Investigación
+                          <input name="type" type="checkbox" value="Centro Público de Investigación">
+                            Centro Público de Investigación
+                          <input name="type" type="checkbox" value="Centro Tecnológico">
+                            Centro Tecnológico<br>
+                          <input name="type" type="checkbox" value="Gran Empresa">
+                            Gran Empresa
+                          <input name="type" type="checkbox" value="Otros">
+                            Otros
+                          <input name="type" type="checkbox" value="Pequeña y mediana empresa">
+                            Pequeña y mediana empresa
+                          <input name="type" type="checkbox" value="Universidad">
+                            Universidad
+                          </div>
+                          <div class="clear"></div>
+                            </div>
+                          <div class="skill-level-closure">
+                          <label for="activity">Actividad que desarrolla:</label>
+                          <select  name="activity">
+                            <option value="Web_programming">Programación Web</value>
+                            <option value="Graphic_applications">Diseño Gráfico</value>
+                            <option value="Office_applications">Aplicaciones Ofimáticas</value>
+                            <option value="Relational_databases">BBDD Relacionales</value>
+                            <option value="Oracle">Oracle</value>
+                            <option value="JavaScript">JavaScript</value>
+                            <option value="VisualBasic">VisualBasic</value>
+                            <option value="VisualBasic">Innovación en teorías, métodos y aplicaciones de técnicas de inteligencia artificial</value>
+                          </select>
+                          </div>
+                          <div class="skill-level-closure">
+                          <label for="experience">Experiencia: </label>
+                          <input type="text" name="experience" id="experience"value="" class="txtBox">
+                          <div id="expSlider"></div>
+                          </div>
+                          
+                      </div>
+                      <div id="step-4">
+                          <h2 class="StepTitle">Resumen de la oferta creada</h2>   
+                           <div class="skill-level-closure">
+                            <label >Nombre de la oferta:  </label>Episteme UI
+                          </div>
+                          <div class="skill-level-closure">
+                            <label >Descripción de la oferta:  </label>Interfaz gráfica en html y jquery
+                          </div>
+                          <div class="skill-level-closure">
+                            <label >Contratante:  </label>GSI
+                          </div>
+                          <div class="skill-level-closure">
+                            <label >Remuneración:  </label>€1500 - €2000
+                          </div> 
+                          <div class="skill-level-closure">
+                            <label >Localización:  </label>ETSIT - UPM
+                          </div> 
+                          <div class="skill-level-closure">
+                            <label >Presupuesto:  </label>€8600
+                          </div> 
+                          <div class="skill-level-closure">
+                            <label >Fecha de finalización:  </label>12/24/2012
+                          </div> 
+                          <div class="skill-level-closure">
+                            <label >Tipo de empresa:  </label>Centro Público de Investigación
+                          </div>                  
+                          <div class="skill-level-closure">
+                            <label >Actividad que desarrolla:  </label>Innovación en teorías, métodos y aplicaciones de técnicas de inteligencia artificial
+                          </div> 
+                          <div class="skill-level-closure">
+                            <label >Experiencia:  </label>9 años
+                          </div>     
+                      </div>
+              
+                </div>
+                
+            </form>
+            <div class="clear"></div>
+        </div><!-- end main-content -->
+
+
+        <div id="footer">
+            <p>Demostrador realizado por:</p>
+            <img class="left logo" src="images/gsi_logo_gray.png" />
+            <img class="left logo" src="images/GlobalMetanoia_logo_gray.png" />
+            <div class="clear"></div>
+        </div><!-- end footer -->
+
+    </div>
+</body>
+
+</html>

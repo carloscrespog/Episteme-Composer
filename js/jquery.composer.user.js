@@ -157,13 +157,21 @@
       list_offers= list_offers + '<div class="imgwrap"><img draggable="false" src="'+val.logo.src+'"/></div>';
       list_offers= list_offers + '<div class="titlebar"><h2>'+val.name+'</h2></div></div>';
       $('.list_offers').append(list_offers);
+
        // $('.item.offer').draggable({
        //   revert: true
        // });
     
     $('.list_companies').parent().hide();
+    
   });
-    $('list_offers').append('<div class="clear"></div>');
+    $('.list_offers').append('<a href="offerWizard.html"><div id="new_offer_entry" class="add-arrow"></div></a>');
+    $('.list_offers').append('<div class="clear"></div>');
+    // $('#new_offer_entry').bind('click', function() {
+    //     console.log('wololo');
+    // });
+    
+    
     $('.item').draggable({
       revert: 'invalid',
       revertDuration: 500,
@@ -178,7 +186,7 @@
  * las capabilities se cargan hardcodeadas
  */
  function loadCompanies(){
-  var query='http://apps.gsi.dit.upm.es/episteme/lmf/sparql/select?query=PREFIX+gsi%3A+%3Chttp%3A%2F%2Fwww.gsi.dit.upm.es%2F%3E+SELECT+DISTINCT+%3Fname+%3Factivity+%3Flogo+%3Ftype+WHERE+%7B++++%3Fs+gsi%3AshortName+%3Fname.+++%3Fs+gsi%3Aactivity+%3Factivity.+++%3Fs+gsi%3Alogo+%3Flogo.+++%3Fs+gsi%3Atype+%3Ftype+%7D+ORDER+BY+%3Ftype+&output=json';
+  var query='http://apps.gsi.dit.upm.es/episteme/lmf/sparql/select?query=PREFIX+gsi%3A+%3Chttp%3A%2F%2Fwww.gsi.dit.upm.es%2F%3E+SELECT+DISTINCT+%3Fname+%3Factivity+%3Flogo+%3Ftype+WHERE+%7B+++++%3Fs+gsi%3AshortName+%3Fname.+++%3Fs+gsi%3Aactivity+%3Factivity.+++OPTIONAL%7B%3Fs+gsi%3Alogo+%3Flogo.%7D+++%3Fs+gsi%3Atype+%3Ftype++++++%7D+ORDER+BY+%3Ftype&output=json';
   //var oldQuery='http://apps.gsi.dit.upm.es/episteme/lmf/sparql/select?query=PREFIX+gsi%3A+%3Chttp%3A%2F%2Fwww.gsi.dit.upm.es%2F%3E+SELECT+DISTINCT+%3Fname+%3Factivity+%3Flogo++WHERE+%7B++++%3Fs+gsi%3AshortName+%3Fname.+++%3Fs+gsi%3Aactivity+%3Factivity.+++%3Fs+gsi%3Alogo+%3Flogo+%7D+ORDER+BY+%3Fname+&output=json';
   // var queryInit='http://apps.gsi.dit.upm.es/episteme/lmf/sparql/select?query=PREFIX+gsi%3A+%3Chttp%3A%2F%2Fwww.gsi.dit.upm.es%2F%3E+SELECT+DISTINCT+%3Fname+%3Factivity+%3Flogo+%3Ftype+WHERE+%7B';
   // var queryAtom='';
@@ -224,7 +232,14 @@
           list_companies= list_companies + 'data-description="'+val.activity.value+'"';
 
           list_companies= list_companies +'>';
-          list_companies= list_companies + '<div class="imgwrap"><img draggable="false" src="'+val.logo.value+'"/></div>';
+          if(val.logo===undefined){
+            console.log(val.logo);
+            console.log(eval(val.logo));
+            list_companies= list_companies + '<div class="imgwrap"><img draggable="false" src="data/images/defaultCompany.png"/></div>';
+          }else{
+            list_companies= list_companies + '<div class="imgwrap"><img draggable="false" src="'+val.logo.value+'"/></div>';
+          }
+          
           list_companies= list_companies + '<div class="titlebar"><h2>'+val.name.value+'</h2></div></div>';
         }
       }
