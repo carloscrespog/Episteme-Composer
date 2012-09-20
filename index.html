@@ -3,8 +3,7 @@
 <html lang="es">
 
 <head>
-
-	  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-type" content="text/html" charset="utf-8">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
     <link rel="stylesheet" href="css/layout.css" type="text/css" media="screen">
@@ -18,7 +17,22 @@
     <script type="text/javascript" src="js/jquery.qtip.min.js"></script>
     <script type="text/javascript" src="js/jquery.anythingslider.js" charset="utf-8"></script>
     <script type="text/javascript" src="js/jquery.composer.user.js"></script>
+<script type="text/javascript" src="js/ajax-solr/core/Core.js"></script>
+<script type="text/javascript" src="js/ajax-solr/core/AbstractManager.js"></script>
+<script type="text/javascript" src="js/ajax-solr/managers/Manager.jquery.js"></script>
+<script type="text/javascript" src="js/ajax-solr/core/Parameter.js"></script>
+<script type="text/javascript" src="js/ajax-solr/core/ParameterStore.js"></script>
 
+    <script type="text/javascript" src="js/ajax-solr/core/AbstractWidget.js"></script>
+    <script type="text/javascript" src="js/ajax-solr/widget/ResultWidget.js"></script>
+
+<script type="text/javascript" src="js/ajax-solr/core/AbstractFacetWidget.js"></script>
+<script type="text/javascript" src="js/ajax-solr/widget/TagcloudWidget.js"></script>
+<script type="text/javascript" src="js/ajax-solr/widget/CurrentSearchWidget.js"></script>
+
+<script type="text/javascript" src="js/ajax-solr/widget/theme.js"></script>
+<script type="text/javascript" src="js/ajax-solr/helpers/ajaxsolr.theme.js"></script>
+<script type="text/javascript" src="js/jquery.livequery.js"></script>
 </head>
 
 <body>
@@ -46,13 +60,17 @@
                     </div>
                     <span class="instructions company" data-instructions="true">Arrastre aquí<br>(Compañías)</span>
                     <span class="instructions not-supported hide" data-instructions-not-supported="true">Not<br>Supported</span>
-                    <div class="cross hide" data-cant-use-read="true"><img src="/static/images/frontend/cross-large.png"></div>
+                    
                 </div>
 
 
                 <div class="clear"></div>
 
             </div>
+	<div class="col1" style="float:left;">
+		<div id="new-widget" class="add-arrow"></div>
+		
+	</div>
             <div id="element-container">
                 <h1>Arrastra ofertas</h1>
                 <div class="list list_offers">
@@ -116,6 +134,10 @@
             <div class="clear"></div>
         </div><!-- end main-content -->
 
+	<div class="result_widget">
+	</div>
+
+	
 
         <div id="footer">
             <p>Demostrador realizado por:</p>
@@ -125,6 +147,14 @@
         </div><!-- end footer -->
 
     </div>
+
+	<div id="province">
+		WIDGET</br>
+
+	</div>
+	<div id="currentselection">
+		
+	</div>
 </body>
 
 </html>

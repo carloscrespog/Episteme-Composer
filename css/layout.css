@@ -478,7 +478,7 @@ body {
     box-shadow: 0 0 0;
   }
 
-  #main-content  .add-arrow, #main-content .back-arrow {
+  #main-content  .add-arrow, #main-content .back-arrow, #main-content .tick -arrow  {
     display: block;
     cursor: pointer;
     width: 50px; 
@@ -501,6 +501,10 @@ body {
     /*  background: url('../images/add_small_a4.svg') no-repeat;*/
     background: url('../images/add_arrow_smllr.png') no-repeat;
   }
+  #main-content .tick-arrow {
+    /*  background: url('../images/add_small_a4.svg') no-repeat;*/
+    background: url('../images/tick_smllr.png') no-repeat;
+  }
 
   #main-content .back-arrow {
     /*background: url('../images/back_arrow.svg') no-repeat;*/
@@ -511,11 +515,11 @@ body {
     left: -65px;
   }
 
-  #main-content .back-arrow:hover, #main-content .add-arrow:hover {
+  #main-content .back-arrow:hover, #main-content .add-arrow:hover, #main-content .tick-arrow:hover {
     background-position: 0 -50px;
   }
 
-  #main-content .back-arrow:active, #main-content .add-arrow:active {
+  #main-content .back-arrow:active, #main-content .add-arrow:active, #main-content .tick-arrow:active {
     background-position: 0 -100px;
   }
 
@@ -704,3 +708,23 @@ body {
   color:#f6931f; 
   font-weight:bold;
 }
+.remove-line {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  font-size: 16px;
+  font-family: verdana, 'Open Sans', arial, helvetica;
+  cursor: pointer;
+  color: #79A04B;
+  margin-left: 20px;
+  visibility: hidden;
+}
+.skill-level-closure:hover .remove-line {
+  visibility: visible;
+}
+.skill-level-closure:hover .remove-line:hover {
+  color: #3c4f25;
+  
+  font-weight: bold;
+}
+

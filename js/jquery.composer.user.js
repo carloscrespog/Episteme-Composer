@@ -3,7 +3,35 @@
  * Developed by Gsi
  */
      var mCapabilities=new Array();
+     // Creamos el Manager
+     var Manager;
+
  $(document).ready(function() {
+
+
+    Manager = new AjaxSolr.Manager({
+        solrUrl: 'http://shannon.gsi.dit.upm.es/episteme/lmf/solr/INES/'
+	//solrUrl: 'http://localhost:8080/LMF/solr/Episteme/'
+    });
+
+    Manager.addWidget(new AjaxSolr.ResultWidget({
+  	id: 'result',
+  	target: '.result_widget'
+    }));
+
+    $('#new-widget').bind('click', function() {
+	console.log("Botón presionado");
+	addWidget(Math.floor(Math.random() * 10001), "province", "province");
+    });
+
+    Manager.addWidget(new AjaxSolr.CurrentSearchWidget({
+  	id: 'currentsearch',
+  	target: '#currentselection',
+    }));
+
+    Manager.init();
+    Manager.store.addByValue('q', '*:*');
+
   $('#main-content').append('<div id="temp-placeholder"></div>');
     loadOffers(); //cargar ofertas
     //loadCompanies(); //cargar compañias
@@ -186,28 +214,9 @@
  * las capabilities se cargan hardcodeadas
  */
  function loadCompanies(){
+/*
   var query='http://apps.gsi.dit.upm.es/episteme/lmf/sparql/select?query=PREFIX+gsi%3A+%3Chttp%3A%2F%2Fwww.gsi.dit.upm.es%2F%3E+SELECT+DISTINCT+%3Fname+%3Factivity+%3Flogo+%3Ftype+WHERE+%7B+++++%3Fs+gsi%3AshortName+%3Fname.+++%3Fs+gsi%3Aactivity+%3Factivity.+++OPTIONAL%7B%3Fs+gsi%3Alogo+%3Flogo.%7D+++%3Fs+gsi%3Atype+%3Ftype++++++%7D+ORDER+BY+%3Ftype&output=json';
-  //var oldQuery='http://apps.gsi.dit.upm.es/episteme/lmf/sparql/select?query=PREFIX+gsi%3A+%3Chttp%3A%2F%2Fwww.gsi.dit.upm.es%2F%3E+SELECT+DISTINCT+%3Fname+%3Factivity+%3Flogo++WHERE+%7B++++%3Fs+gsi%3AshortName+%3Fname.+++%3Fs+gsi%3Aactivity+%3Factivity.+++%3Fs+gsi%3Alogo+%3Flogo+%7D+ORDER+BY+%3Fname+&output=json';
-  // var queryInit='http://apps.gsi.dit.upm.es/episteme/lmf/sparql/select?query=PREFIX+gsi%3A+%3Chttp%3A%2F%2Fwww.gsi.dit.upm.es%2F%3E+SELECT+DISTINCT+%3Fname+%3Factivity+%3Flogo+%3Ftype+WHERE+%7B';
-  // var queryAtom='';
-  // if(capabilities.length <=1){
-  //   queryAtom='+%3Fs+gsi%3AshortName+%3Fname.+++%3Fs+gsi%3Aactivity+%3Factivity.+++%3Fs+gsi%3Alogo+%3Flogo.+++%3Fs+gsi%3Atype+%3Ftype.+++%3Fs+gsi%3Atype+%22'+capabilities[0]+'%22';
-
-  // }else{
-  //   for( var j in capabilities){
-  //     queryAtom= queryAtom+ '+%7B++++++%3Fs+gsi%3AshortName+%3Fname.+++%3Fs+gsi%3Aactivity+%3Factivity.+++%3Fs+gsi%3Alogo+%3Flogo.+++%3Fs+gsi%3Atype+%3Ftype.+++%3Fs+gsi%3Atype+%22';
-  //     queryAtom= queryAtom+ capabilities[j];
-  //     queryAtom= queryAtom+ '%22%7D';
-  //     if(j!=(capabilities.length-1)){
-  //       queryAtom= queryAtom+'UNION';
-  //     }
-  //   }
-  // }
-  // var queryLast='%7D+ORDER+BY+%3Ftype&output=json';
-
-
-  // var query=queryInit+queryAtom+queryLast;
-  // console.log('Query realizada: '+query);
+  
   $.getJSON(query, function(data) {
 
     var list_companies='<li class="panel">';
@@ -233,8 +242,7 @@
 
           list_companies= list_companies +'>';
           if(val.logo===undefined){
-            console.log(val.logo);
-            console.log(eval(val.logo));
+            
             list_companies= list_companies + '<div class="imgwrap"><img draggable="false" src="data/images/defaultCompany.png"/></div>';
           }else{
             list_companies= list_companies + '<div class="imgwrap"><img draggable="false" src="'+val.logo.value+'"/></div>';
@@ -248,48 +256,15 @@
 list_companies= list_companies + '</li>';
 
 $('.list_companies').html(list_companies);
-//$('.list_companies').parent().parent().parent().css('height','500px');
+*/
+Manager.addWidget(new AjaxSolr.ResultWidget({
+  id: 'result',
+  target: '.list_companies'
+}));
 
+    Manager.doRequest();
 
-    /*
-     * Usamos el helper clone para que no desaparezca al arrastrar
-     * appendTo se encarga de que el draggable pueda salir de la caja del slider
-     * usamos revert  invalid porque queremos que vuelva al dejar fuera del hueco
-     */
-     $('.item').draggable({
-      revert: 'invalid',
-      revertDuration: 500,
-      appendTo: '#temp-placeholder',
-      helper: 'clone',
-      scroll: true
-    });
-     $('#slider').anythingSlider({
-      buildStartStop:false,
-      hashTags:false
-    });
-     $('.list_companies').parent().parent().parent().show();
-     $('.item').qtip({
-      content: {
-        title: {
-          text: function(){
-            return $(this).html();
-          }
-        },
-        attr:'data-description'
-      },
-      style: {
-        classes: 'ui-tooltip-rounded ui-tooltip-shadow ui-tooltip-episteme'
-      },
-      // hide: {
-      //   event: 'click'
-      // },
-      
-      position:{
-        my:'bottom center',
-        at:'top center'
-      }
-    });
-   });
+   
 
 }
 function replaceAll( text, busca, reemplaza ){
@@ -301,3 +276,30 @@ function showIt(){
   $('.list_companies').parent().parent().parent().show();
 }
 
+
+function addWidget(id, target, field){
+      console.log("Add widget");
+
+      Manager.addWidget(new AjaxSolr.TagcloudWidget({
+        id: id,
+        target: '#' + target,
+        field: field
+      }));
+
+    Manager.store.addByValue('q', '*:*');
+
+    var params = {
+      facet: true,
+      'facet.field': field,
+      'facet.limit': 10,
+      'facet.sort': 'count',
+      'facet.mincount': 1,
+      'json.nl': 'map'
+    };
+
+    for (var name in params) {
+      Manager.store.addByValue(name, params[name]);
+    }
+
+    Manager.doRequest();
+}
