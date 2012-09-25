@@ -15,8 +15,8 @@
     });
 
     Manager.addWidget(new AjaxSolr.ResultWidget({
-  	id: 'result',
-  	target: '.result_widget'
+    id: 'result',
+    target: '.result_widget'
     }));
 
     $('#new-widget').bind('click', function() {
@@ -25,8 +25,8 @@
     });
 
     Manager.addWidget(new AjaxSolr.CurrentSearchWidget({
-  	id: 'currentsearch',
-  	target: '#currentselection',
+    id: 'currentsearch',
+    target: '#currentselection'
     }));
 
     Manager.init();

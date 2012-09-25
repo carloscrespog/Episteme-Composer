@@ -727,4 +727,20 @@ body {
   
   font-weight: bold;
 }
+.widgetArea{
+  margin-top: 20px;
+  display:inline-block;
+  font-family: verdana, arial;
+  padding-bottom: 15px;
+  font-size: 20px;
+  color: #666;
+}
+#province{
+  
+}
+#new-widget.add-arrow{
+  float:right;
+}
+#currentselection{
 
+}
