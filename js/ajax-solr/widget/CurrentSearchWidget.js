@@ -18,7 +18,11 @@ AjaxSolr.CurrentSearchWidget = AjaxSolr.AbstractWidget.extend({
 
     var fq = this.manager.store.values('fq');
     for (var i = 0, l = fq.length; i < l; i++) {
-      links.push($('<a href="#"/>').text('(x) ' + fq[i]).click(self.removeFacet(fq[i])));
+      if(fq[i].split(':')[0]!='type'){
+          links.push($('<a href="#"/>').text('(x) ' + fq[i]).click(self.removeFacet(fq[i])));
+
+      }
+      //links.push($('<a href="google.com"/>').text('(x) ' + fq[i]));
     }
 
     if (links.length > 1) {
@@ -34,7 +38,7 @@ AjaxSolr.CurrentSearchWidget = AjaxSolr.AbstractWidget.extend({
       AjaxSolr.theme('list_items', this.target, links);
     }
     else {
-      $(this.target).html('<div>No hay filtro aplicado</div>');
+      $(this.target).html('');
     }
   },
 
@@ -42,6 +46,7 @@ AjaxSolr.CurrentSearchWidget = AjaxSolr.AbstractWidget.extend({
     var self = this;
     return function () {
       if (self.manager.store.removeByValue('fq', facet)) {
+
         self.doRequest();
       }
       return false;

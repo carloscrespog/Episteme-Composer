@@ -8,20 +8,22 @@
 
  $(document).ready(function() {
 
-
+  $('.widgetArea').hide();
     Manager = new AjaxSolr.Manager({
         solrUrl: 'http://shannon.gsi.dit.upm.es/episteme/lmf/solr/INES/'
 	//solrUrl: 'http://localhost:8080/LMF/solr/Episteme/'
     });
 
     Manager.addWidget(new AjaxSolr.ResultWidget({
-    id: 'result',
-    target: '.result_widget'
+      id: 'result',
+      target: '.result_widget'
     }));
 
     $('#new-widget').bind('click', function() {
-	console.log("Botón presionado");
-	addWidget(Math.floor(Math.random() * 10001), "province", "province");
+      
+      addWidget(Math.floor(Math.random() * 10001), "province", "province");
+      $('#new-widget').hide();
+
     });
 
     Manager.addWidget(new AjaxSolr.CurrentSearchWidget({
@@ -29,8 +31,15 @@
     target: '#currentselection'
     }));
 
+    // Manager.addWidget(new AjaxSolr.AutocompleteWidget({
+    //   id: 'text',
+    //   target: '#searchBox',
+    //   fields: [ 'name' ]
+    // }));
+
     Manager.init();
     Manager.store.addByValue('q', '*:*');
+
 
   $('#main-content').append('<div id="temp-placeholder"></div>');
     loadOffers(); //cargar ofertas
@@ -77,6 +86,7 @@
     $('.panel-to').html(htmlCompanies);
     $('.list_offers').parent().show();
     $('.list_companies').parent().parent().parent().hide();
+    $('.widgetArea').hide();
   }
 /*
  * Función que se usa para eliminar las compañias que se sueltan en un hueco
@@ -85,10 +95,10 @@
   $(el).parent().parent().parent().droppable("enable");
   var cap=$(el).parent().parent().parent().attr('data-capability');
   var index=$(el).parent().parent().parent().attr('id');
-  console.log('------------Estamos en el div   '+index.replace('o',''));
-  mCapabilities[eval(index)]=cap;
+  mCapabilities[eval(index.replace('o',''))]=cap;
   loadCompanies();
   $(el).parent().parent().remove();
+
 
 }
 /*
@@ -106,9 +116,9 @@
     $.each(data.offers[itemid].capabilities, function(key, val) {
       var htmlCompanies='';
       htmlCompanies = htmlCompanies + '<div class="service droppable drop-company" data-max-items="1" data-drag-out-kill="true" data-read-service="true" data-droppable="true" data-capability="'+val+'" style="position: relative; " id="o'+key+'">';
-      htmlCompanies = htmlCompanies + '<span class="instructions company" data-instructions="true">Arrastre aqu&iacute;<br>(Compañ&iacute;as)</span></div>'+val;
+      htmlCompanies = htmlCompanies + '<span class="instructions company" data-instructions="true">Arrastre aqu&iacute;:<br>('+val+')</span></div>';
       htmlCompanies = htmlCompanies + '<span class="instructions not-supported hide" data-instructions-not-supported="true">Not<br>Supported</span>';
-      htmlCompanies = htmlCompanies + '<div class="cross hide" data-cant-use-read="true"><img src="/static/images/frontend/cross-large.png"></div>';
+      htmlCompanies = htmlCompanies + '<div class="cross hide" data-cant-use-read="true"><img src=""></div>';
       $('.panel-to').append(htmlCompanies);
       //$('.panel-to').hide().append(htmlCompanies).show('fast');
 
@@ -116,7 +126,7 @@
       var classType= val;
       classType=classType.split(' ')[0]+'_'+classType.split(' ')[1];
       var mClass='\".'+classType+'\"';
-      console.log(eval(mdiv)+' y '+mClass);
+      
       dropifier(mdiv,mClass,key);
       // $(eval(mClass)).css('opacity','1');
       // var mCapability=replaceAll(val,"ñ",'%F1');
@@ -144,9 +154,14 @@
     activeClass: "drop-active",
     hoverClass: "drop-hover",
     drop: function(event, ui) {
+      $('.instructions.company').show();
+      var mdivClass='\''+mdiv.split('\'')[1]+' .instructions.company'+'\'';
+      
+
+      $(eval(mdivClass)).empty();
       mDraggable=ui.draggable;
       mDraggable.hide();
-      $('.instructions.company').empty();
+      //$('.instructions.company').empty();
       var item = ui.draggable.html();
       var itemid = ui.draggable.attr("id");
       var html = '<div class="service dropped">';
@@ -155,9 +170,28 @@
       html = html + '</div><div>'+item+'</div>';
       $(this).append(html);
       $(this).droppable("disable");
-      console.log('Esta es la key: '+key);
+      
       mCapabilities[key]='x';
-      loadCompanies();
+      
+      
+      var testFinish=0;
+      for (var m in mCapabilities){
+        if(mCapabilities[m]=='x'){
+          testFinish++;
+        }
+      }
+      if(testFinish==mCapabilities.length){
+        //window.location.replace("/endPage.html");
+        $('.list_companies').parent().parent().parent().hide();
+        $('.widgetArea').hide();
+        $('#endPanel').show();
+      }else{
+        loadCompanies();
+      }
+
+      
+      
+      
       $('.list_companies').parent().show();
     },activate: function(event,ui){
       $('.instructions.company').hide();
@@ -214,7 +248,8 @@
  * las capabilities se cargan hardcodeadas
  */
  function loadCompanies(){
-/*
+  
+  /*
   var query='http://apps.gsi.dit.upm.es/episteme/lmf/sparql/select?query=PREFIX+gsi%3A+%3Chttp%3A%2F%2Fwww.gsi.dit.upm.es%2F%3E+SELECT+DISTINCT+%3Fname+%3Factivity+%3Flogo+%3Ftype+WHERE+%7B+++++%3Fs+gsi%3AshortName+%3Fname.+++%3Fs+gsi%3Aactivity+%3Factivity.+++OPTIONAL%7B%3Fs+gsi%3Alogo+%3Flogo.%7D+++%3Fs+gsi%3Atype+%3Ftype++++++%7D+ORDER+BY+%3Ftype&output=json';
   
   $.getJSON(query, function(data) {
@@ -261,9 +296,34 @@ Manager.addWidget(new AjaxSolr.ResultWidget({
   id: 'result',
   target: '.list_companies'
 }));
+  console.log(mCapabilities);
+  var fquery = '';
+  for (var j in mCapabilities){
+    if(mCapabilities[j]!="x"){
+      if(j==mCapabilities.length-1){
+        fquery+='type:' + mCapabilities[j];
+      }else{
+        fquery+='type:' + mCapabilities[j] + ' OR ';
+
+      }
+    }
+
+  }
+    var fq = Manager.store.values('fq');
+
+    for (var i = 0, l = fq.length; i < l; i++) {
+      if(fq[i].split(':')[0]=='type'){
+          
+          Manager.store.removeByValue('fq', fq[i]);
+
+      }
+      //links.push($('<a href="google.com"/>').text('(x) ' + fq[i]));
+    }
+    Manager.store.addByValue('fq', fquery);
+
 
     Manager.doRequest();
-
+    
    
 
 }

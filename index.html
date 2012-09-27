@@ -33,6 +33,10 @@
 <script type="text/javascript" src="js/ajax-solr/widget/theme.js"></script>
 <script type="text/javascript" src="js/ajax-solr/helpers/ajaxsolr.theme.js"></script>
 <script type="text/javascript" src="js/jquery.livequery.js"></script>
+<script type="text/javascript" src="js/ajax-solr/core/AbstractTextWidget.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery.autocomplete.css" media="screen" />
+<script type="text/javascript" src="js/ajax-solr/widget/jquery.autocomplete.js"></script>
+<script type="text/javascript" src="js/ajax-solr/widget/AutocompleteWidget.js"></script>
 </head>
 
 <body>
@@ -90,8 +94,20 @@
                     <div class="clear"></div>
                 </div>
             </div>
-            <div id="element-container">
+            <div class="widgetArea">
+                <ul id="searchBox"><input type="text" id="query" name="query" placeholder="Tu consulta" size="40"></input></ul>
+                <div id="widgetBody">
+                    <div id="currentselection"></div>
+                    <div id="new-widget" class="add-arrow"></div>
+
+                    <div id="province">Añadir filtro </div>
+
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div id="element-container" style="display: inline;">
                 <h1>Arrastra compañías</h1>
+                
                 <ul class="list list_companies" id="slider">
                     <div class="item company" data-capability="technical_memo admin_memo" id="i1">
                         <div class="imgwrap">
@@ -127,23 +143,23 @@
                     </div>
                     <div class="clear"></div>
                 </ul>
-                <div class="widgetArea">
-            
-            <div id="province"></div>
-            <div id="new-widget" class="add-arrow"></div>
-                <div id="currentselection">
 
-                </div>
-                <div class="clear"></div>
-        </div>
             </div>
-
+            <div class="clear"></div>
+            <div id="endPanel" style="display: none;">
+                <h2>Consorcio completado<br/></h2>
+                <ul>
+                    <li><a href='#'>Mandar Expresión de Interés</a></li>
+                    <li><a href='#'>Convocar teleconferencia</a></li>
+                    <li><a href='#'>Convocar reunión</a></li>
+                    <li><a href='#'>Revisar consorcio</a></li>
+            </div>
             <div class="clear"></div>
         </div><!-- end main-content -->
 
 	
         
-    
+        
         
     
     

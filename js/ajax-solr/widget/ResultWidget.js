@@ -60,6 +60,7 @@ var count=0;
 	
     }
 	$(this.target).append(element);
+  $('.widgetArea').show();
     /*
      * Usamos el helper clone para que no desaparezca al arrastrar
      * appendTo se encarga de que el draggable pueda salir de la caja del slider
