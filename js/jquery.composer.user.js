@@ -301,9 +301,10 @@ Manager.addWidget(new AjaxSolr.ResultWidget({
   for (var j in mCapabilities){
     if(mCapabilities[j]!="x"){
       if(j==mCapabilities.length-1){
-        fquery+='type:' + mCapabilities[j];
+
+        fquery+='type:' + '"'+mCapabilities[j]+'"';
       }else{
-        fquery+='type:' + mCapabilities[j] + ' OR ';
+        fquery+='type:' + '"'+ mCapabilities[j] + '"'+ ' OR ';
 
       }
     }
