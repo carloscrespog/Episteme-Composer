@@ -98,7 +98,7 @@
     $('.list_offers').parent().show();
     $('.list_companies').parent().parent().parent().hide();
     $('.widgetArea').hide();
-    $('#endPanel').show();
+    $('#endPanel').hide();
   }
 /*
  * Función que se usa para eliminar las compañias que se sueltan en un hueco
@@ -108,6 +108,7 @@
   var cap=$(el).parent().parent().parent().attr('data-capability');
   var index=$(el).parent().parent().parent().attr('id');
   mCapabilities[eval(index.replace('o',''))]=cap;
+  console.log('mCapabilities= '+mCapabilities);
   loadCompanies();
   $(el).parent().parent().remove();
 
@@ -234,7 +235,7 @@ loadCompanies();
  *
  */
  function loadCompanies(){
-
+console.log('mCapabilities= '+mCapabilities);
   Manager.addWidget(new AjaxSolr.ResultWidget({
     id: 'result',
     target: '.list_companies'
