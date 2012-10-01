@@ -1,3 +1,8 @@
+/**
+ *
+ *
+ */
+
 (function ($) {
 
 AjaxSolr.TextWidget = AjaxSolr.AbstractTextWidget.extend({

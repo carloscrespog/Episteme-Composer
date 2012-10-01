@@ -3,34 +3,45 @@
  * Developed by Gsi
  */
      var mCapabilities=new Array();
-     // Creamos el Manager
+     
      var Manager;
 
  $(document).ready(function() {
 
   $('.widgetArea').hide();
-    Manager = new AjaxSolr.Manager({
-        solrUrl: 'http://shannon.gsi.dit.upm.es/episteme/lmf/solr/INES/'
+  /**
+   * Definir url del endpoint
+   */
+  Manager = new AjaxSolr.Manager({
+    solrUrl: 'http://shannon.gsi.dit.upm.es/episteme/lmf/solr/INES/'
 	//solrUrl: 'http://localhost:8080/LMF/solr/Episteme/'
-    });
-
-    Manager.addWidget(new AjaxSolr.ResultWidget({
-      id: 'result',
-      target: '.result_widget'
+  });
+  /**
+   * Añadir widget de resultados
+   */
+   Manager.addWidget(new AjaxSolr.ResultWidget({
+    id: 'result',
+    target: '.result_widget'
     }));
-
+  /**
+   * Botón de widget de provincias
+   */
     $('#new-widget').bind('click', function() {
       
       addWidget(Math.floor(Math.random() * 10001), "province", "province");
       $('#new-widget').hide();
 
     });
-
+  /**
+   * Widget que indica filtros aplicados
+   */
     Manager.addWidget(new AjaxSolr.CurrentSearchWidget({
     id: 'currentsearch',
     target: '#currentselection'
     }));
-
+  /**
+   * Widget de autocompletado
+   */
     // Manager.addWidget(new AjaxSolr.AutocompleteWidget({
     //   id: 'text',
     //   target: '#searchBox',
@@ -40,10 +51,10 @@
     Manager.init();
     Manager.store.addByValue('q', '*:*');
 
-
+    //Para el appendTo de los draggables
   $('#main-content').append('<div id="temp-placeholder"></div>');
     loadOffers(); //cargar ofertas
-    //loadCompanies(); //cargar compañias
+    
 
   /*
    * Hacer droppables los huecos para las ofertas
@@ -87,6 +98,7 @@
     $('.list_offers').parent().show();
     $('.list_companies').parent().parent().parent().hide();
     $('.widgetArea').hide();
+    $('#endPanel').show();
   }
 /*
  * Función que se usa para eliminar las compañias que se sueltan en un hueco
@@ -109,9 +121,7 @@
   $.getJSON('data/offers/offers.js', function(data) {
     $('.list_offers').parent().hide();
     
-    // $('.company').css('opacity','0.25');
     $('.panel-to').html('');
-    // var mCapabilities=new Array();
 
     $.each(data.offers[itemid].capabilities, function(key, val) {
       var htmlCompanies='';
@@ -120,7 +130,6 @@
       htmlCompanies = htmlCompanies + '<span class="instructions not-supported hide" data-instructions-not-supported="true">Not<br>Supported</span>';
       htmlCompanies = htmlCompanies + '<div class="cross hide" data-cant-use-read="true"><img src=""></div>';
       $('.panel-to').append(htmlCompanies);
-      //$('.panel-to').hide().append(htmlCompanies).show('fast');
 
       var mdiv='\'#o'+key+'\'';
       var classType= val;
@@ -128,19 +137,10 @@
       var mClass='\".'+classType+'\"';
       
       dropifier(mdiv,mClass,key);
-      // $(eval(mClass)).css('opacity','1');
-      // var mCapability=replaceAll(val,"ñ",'%F1');
-      // mCapability=replaceAll(mCapability,' ','+');
-      // mCapability=replaceAll(mCapability,'ó','%F3');
-      // mCapabilities[key]=mCapability;
       mCapabilities[key]=val;
-      // console.log (mCapabilities[key]+ ' numero: '+key);
-    });
-  // console.log("llamando loadCompanies");
-  loadCompanies();
-  //$('.list_companies').parent().parent().parent().show();
-  // console.log("llamado loadCompanies");
 
+    });
+loadCompanies();
 });
 }
 /*
@@ -171,7 +171,7 @@
       $(this).append(html);
       $(this).droppable("disable");
       
-      mCapabilities[key]='x';
+      mCapabilities[key]='x'; //Capability desactivada
       
       
       var testFinish=0;
@@ -188,10 +188,6 @@
       }else{
         loadCompanies();
       }
-
-      
-      
-      
       $('.list_companies').parent().show();
     },activate: function(event,ui){
       $('.instructions.company').hide();
@@ -219,21 +215,11 @@
       list_offers= list_offers + '<div class="imgwrap"><img draggable="false" src="'+val.logo.src+'"/></div>';
       list_offers= list_offers + '<div class="titlebar"><h2>'+val.name+'</h2></div></div>';
       $('.list_offers').append(list_offers);
-
-       // $('.item.offer').draggable({
-       //   revert: true
-       // });
-    
     $('.list_companies').parent().hide();
     
   });
     $('.list_offers').append('<a href="offerWizard.html"><div id="new_offer_entry" class="add-arrow"></div></a>');
     $('.list_offers').append('<div class="clear"></div>');
-    // $('#new_offer_entry').bind('click', function() {
-    //     console.log('wololo');
-    // });
-    
-    
     $('.item').draggable({
       revert: 'invalid',
       revertDuration: 500,
@@ -245,58 +231,15 @@
 }
 /*
  * Carga las compañias, mediante lmf
- * las capabilities se cargan hardcodeadas
+ *
  */
  function loadCompanies(){
-  
-  /*
-  var query='http://apps.gsi.dit.upm.es/episteme/lmf/sparql/select?query=PREFIX+gsi%3A+%3Chttp%3A%2F%2Fwww.gsi.dit.upm.es%2F%3E+SELECT+DISTINCT+%3Fname+%3Factivity+%3Flogo+%3Ftype+WHERE+%7B+++++%3Fs+gsi%3AshortName+%3Fname.+++%3Fs+gsi%3Aactivity+%3Factivity.+++OPTIONAL%7B%3Fs+gsi%3Alogo+%3Flogo.%7D+++%3Fs+gsi%3Atype+%3Ftype++++++%7D+ORDER+BY+%3Ftype&output=json';
-  
-  $.getJSON(query, function(data) {
 
-    var list_companies='<li class="panel">';
-    var count=-1;
-    $.each(data.results.bindings, function(key, val) {
-      for(var j in mCapabilities){
-        if(val.type.value==mCapabilities[j]){
-          count++;
-          if(count===15){
-            count=0;
-            list_companies= list_companies + '</li><li class="panel">';
-          }
-          list_companies= list_companies + '<div class="item company ';
-          var classType= val.type.value;
-          classType=classType.split(' ')[0]+'_'+classType.split(' ')[1];
-          list_companies= list_companies + classType;
-
-          list_companies= list_companies + '" id="i'+key+'" '   ;
-          list_companies= list_companies + 'data-capability="';
-
-          list_companies= list_companies + val.type.value+'"';
-          list_companies= list_companies + 'data-description="'+val.activity.value+'"';
-
-          list_companies= list_companies +'>';
-          if(val.logo===undefined){
-            
-            list_companies= list_companies + '<div class="imgwrap"><img draggable="false" src="data/images/defaultCompany.png"/></div>';
-          }else{
-            list_companies= list_companies + '<div class="imgwrap"><img draggable="false" src="'+val.logo.value+'"/></div>';
-          }
-          
-          list_companies= list_companies + '<div class="titlebar"><h2>'+val.name.value+'</h2></div></div>';
-        }
-      }
-      
-    });
-list_companies= list_companies + '</li>';
-
-$('.list_companies').html(list_companies);
-*/
-Manager.addWidget(new AjaxSolr.ResultWidget({
-  id: 'result',
-  target: '.list_companies'
-}));
-  console.log(mCapabilities);
+  Manager.addWidget(new AjaxSolr.ResultWidget({
+    id: 'result',
+    target: '.list_companies'
+  }));
+  //Consulta lmf en función de capabilities
   var fquery = '';
   for (var j in mCapabilities){
     if(mCapabilities[j]!="x"){
@@ -310,36 +253,23 @@ Manager.addWidget(new AjaxSolr.ResultWidget({
     }
 
   }
-    var fq = Manager.store.values('fq');
+  var fq = Manager.store.values('fq');
 
-    for (var i = 0, l = fq.length; i < l; i++) {
-      if(fq[i].split(':')[0]=='type'){
-          
-          Manager.store.removeByValue('fq', fq[i]);
+  for (var i = 0, l = fq.length; i < l; i++) {
+    if(fq[i].split(':')[0]=='type'){
 
-      }
-      //links.push($('<a href="google.com"/>').text('(x) ' + fq[i]));
+      Manager.store.removeByValue('fq', fq[i]);
+
+    }
+
     }
     Manager.store.addByValue('fq', fquery);
-
-
-    Manager.doRequest();
-    
-   
-
-}
-function replaceAll( text, busca, reemplaza ){
-  while (text.toString().indexOf(busca) != -1)
-    text = text.toString().replace(busca,reemplaza);
-  return text;
-}
-function showIt(){
-  $('.list_companies').parent().parent().parent().show();
-}
-
-
+    Manager.doRequest(); //Método encargado de recargar las compañias
+  }
+/*
+ *  Método para añadir los widgets
+ */
 function addWidget(id, target, field){
-      console.log("Add widget");
 
       Manager.addWidget(new AjaxSolr.TagcloudWidget({
         id: id,

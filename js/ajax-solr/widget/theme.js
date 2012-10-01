@@ -1,3 +1,8 @@
+/**
+ * theme.js
+ * Carga cada compañia, usada por ResultWidget
+ */
+
 (function ($) {
 
 
@@ -27,6 +32,7 @@ AjaxSolr.theme.prototype.result = function (doc, max_results) {
           list_companies= list_companies + 'data-description="'+doc.activity+'"';
 
           list_companies= list_companies +'>';
+          //Si no existe logo, selecciona uno en funcion del tipo de compañia
           if(doc.logo===undefined){
             var img='defaultCompany.png';
             switch(classType.split('_')[0]){
@@ -50,7 +56,6 @@ AjaxSolr.theme.prototype.result = function (doc, max_results) {
               break;
             }
             list_companies= list_companies + '<div class="imgwrap"><img draggable="false" src="data/images/'+img+'"/></div>';
-            //console.log(list_companies);
           }else{
             list_companies= list_companies + '<div class="imgwrap"><img draggable="false" src="'+doc.logo+'"/></div>';
           }

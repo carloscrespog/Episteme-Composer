@@ -1,10 +1,18 @@
+/**
+ * ResultWidget.js
+ * Widget encargado de mostrar las compañias de forma ordenada
+ * en las páginas del Slider, usa la clase theme.js
+ */
+
 (function ($) {
 
-AjaxSolr.ResultWidget = AjaxSolr.AbstractWidget.extend({
+ var elementsPerPage=15;
+
+ AjaxSolr.ResultWidget = AjaxSolr.AbstractWidget.extend({
   start: 0,
 
   beforeRequest: function () {
-    //$(this.target).html($('<img/>').attr('src', 'images/ajax-loader.gif'));
+    
   },
 
   facetLinks: function (facet_field, facet_values) {
@@ -34,32 +42,26 @@ AjaxSolr.ResultWidget = AjaxSolr.AbstractWidget.extend({
 
   afterRequest: function () {
     $(this.target).empty();
-	var element='';
-var count=0;
+    var element='';
+    var count=0;
+    /*Para cada elemento de la respuesta, cada compañia, unelos en paginas
+    y realiza un append con todas*/
     for (var i = 0, l = this.manager.response.response.docs.length; i < l; i++) {
-	
-	if(i==0){
-		element=element+'<li class="panel">';
-	}
-	count++;
-      
-      var doc = this.manager.response.response.docs[i];
-	element=element + AjaxSolr.theme('result', doc, this.manager.response.response.docs.length);
-	if(count===15){
-		element=element+'</li><li class="panel">';
-		count=0;
-	}
-      
 
-      //var items = [];
-      //items = items.concat(this.facetLinks('topics', doc.topics));
-      //items = items.concat(this.facetLinks('organisations', doc.organisations));
-      //items = items.concat(this.facetLinks('exchanges', doc.exchanges));
-      //AjaxSolr.theme('list_items', '#links_' + doc.id, items);
-	//console.log('Iteracion: '+i);
-	
+     if(i===0){
+      element=element+'<li class="panel">';
     }
-	$(this.target).append(element);
+    count++;
+
+    var doc = this.manager.response.response.docs[i];
+    element=element + AjaxSolr.theme('result', doc, this.manager.response.response.docs.length);
+    if(count===elementsPerPage){
+      element=element+'</li><li class="panel">';
+      count=0;
+    }
+
+  }
+  $(this.target).append(element);
   $('.widgetArea').show();
     /*
      * Usamos el helper clone para que no desaparezca al arrastrar
@@ -92,17 +94,17 @@ var count=0;
       style: {
         classes: 'ui-tooltip-rounded ui-tooltip-shadow ui-tooltip-episteme'
       },
-     
+
       
       position:{
         my:'bottom center',
         at:'top center'
       }
     });
-	
-  },
 
-  init: function () {
+   },
+
+   init: function () {
     $('a.more').livequery(function () {
       $(this).toggle(function () {
         $(this).parent().find('span').show();
