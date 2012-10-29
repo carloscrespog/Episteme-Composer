@@ -1,0 +1,286 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:ecos="http://kmm.lboro.ac.uk/ecos/1.0#"
+    xmlns:j.0="http://episteme.com/ns#"
+    xmlns:v="http://www.w3.org/2006/vcard/ns#" > 
+  <rdf:Description rdf:nodeID="A0">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Fax"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <ecos:name xml:lang="en">Antennas</ecos:name>
+    <ecos:name xml:lang="es">Antenas</ecos:name>
+    <ecos:Code rdf:nodeID="A3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <ecos:name xml:lang="en">Technical assistance</ecos:name>
+    <ecos:name xml:lang="es">Asistencia técnica</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <v:VCard rdf:nodeID="A6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <ecos:name xml:lang="en">Telecommunications engineer</ecos:name>
+    <ecos:name xml:lang="es">Ingeniero de telecomunicaciones</ecos:name>
+    <ecos:Code rdf:nodeID="A8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <ecos:name xml:lang="en">Telecommunication service</ecos:name>
+    <ecos:name xml:lang="es">Servicio técnico telecomunicación</ecos:name>
+    <ecos:Code rdf:nodeID="A11"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <ecos:name xml:lang="en">Digital terrestrial television</ecos:name>
+    <ecos:name xml:lang="es">Televisión digital terrestre</ecos:name>
+    <ecos:Code rdf:nodeID="A13"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <j.0:DataSource rdf:resource="http://kmm.lboro.ac.uk/ecos/1.0#vulka"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <v:organisation-name>A.C.P.telecomunicaciones</v:organisation-name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <ecos:name xml:lang="en">Maintenance of equipment</ecos:name>
+    <ecos:name xml:lang="es">Mantenimiento de equipos</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <ecos:Skill rdf:nodeID="A19"/>
+    <ecos:Plan rdf:nodeID="A20"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.vulka.es/empresa/a-c-p-telecomunicaciones_1434609.html">
+    <j.0:HasDataSource rdf:nodeID="A14"/>
+    <v:VCard rdf:nodeID="A21"/>
+    <ecos:Specific rdf:nodeID="A18"/>
+    <ecos:General rdf:nodeID="A22"/>
+    <rdf:type rdf:resource="http://kmm.lboro.ac.uk/ecos/1.0#Enterprise"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <ecos:value>CNAE#J6020</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A24">
+    <ecos:name xml:lang="en">Consulting in telecommunications</ecos:name>
+    <ecos:name xml:lang="es">Asesoría en telecomunicación</ecos:name>
+    <ecos:Code rdf:nodeID="A25"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A26">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <ecos:name xml:lang="en">Collective antennas</ecos:name>
+    <ecos:name xml:lang="es">Antenas colectivas</ecos:name>
+    <ecos:Code rdf:nodeID="A28"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A29">
+    <ecos:name xml:lang="en">Telecommunications Engineering</ecos:name>
+    <ecos:name xml:lang="es">Ingeniería en telecomunicaciones</ecos:name>
+    <ecos:Code rdf:nodeID="A9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <rdf:Bag rdf:nodeID="A30"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <ecos:summary xml:lang="en">installation and repair of antennae; faults, Freeview, digital plus, Earth satellite, telephony...</ecos:summary>
+    <ecos:summary xml:lang="es">instalacion y reparacion de antenas; averias ,tdt, digital plus, satelite, terrestre,telefonia...</ecos:summary>
+    <ecos:CompanyName rdf:nodeID="A31"/>
+    <ecos:Address rdf:nodeID="A5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A32">
+    <ecos:name xml:lang="en">Televisions</ecos:name>
+    <ecos:name xml:lang="es">Televisiones</ecos:name>
+    <ecos:Code rdf:nodeID="A23"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A33">
+    <ecos:name xml:lang="en">DVB-t</ecos:name>
+    <ecos:name xml:lang="es">Tdt</ecos:name>
+    <ecos:Code rdf:nodeID="A34"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A35">
+    <ecos:name xml:lang="en">Installation of telecommunication</ecos:name>
+    <ecos:name xml:lang="es">Instalación de telecomunicación</ecos:name>
+    <ecos:Code rdf:nodeID="A36"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A37">
+    <ecos:name xml:lang="en">Parabolic</ecos:name>
+    <ecos:name xml:lang="es">Parabólica</ecos:name>
+    <ecos:Code rdf:nodeID="A38"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A31">
+    <ecos:uri>http://www.tdt-tenerife.com</ecos:uri>
+    <ecos:name>A.C.P.telecomunicaciones</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A34">
+    <ecos:value>CNAE#J6020</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A39">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A30">
+    <rdf:_13 rdf:nodeID="A7"/>
+    <rdf:_14 rdf:nodeID="A40"/>
+    <rdf:_12 rdf:nodeID="A29"/>
+    <rdf:_6 rdf:nodeID="A41"/>
+    <rdf:_20 rdf:nodeID="A42"/>
+    <rdf:_23 rdf:nodeID="A33"/>
+    <rdf:_27 rdf:nodeID="A32"/>
+    <rdf:_26 rdf:nodeID="A12"/>
+    <rdf:_22 rdf:nodeID="A10"/>
+    <rdf:_7 rdf:nodeID="A43"/>
+    <rdf:_8 rdf:nodeID="A24"/>
+    <rdf:_1 rdf:nodeID="A44"/>
+    <rdf:_21 rdf:nodeID="A45"/>
+    <rdf:_17 rdf:nodeID="A46"/>
+    <rdf:_11 rdf:nodeID="A47"/>
+    <rdf:_15 rdf:nodeID="A35"/>
+    <rdf:_10 rdf:nodeID="A48"/>
+    <rdf:_16 rdf:nodeID="A49"/>
+    <rdf:_9 rdf:nodeID="A4"/>
+    <rdf:_24 rdf:nodeID="A50"/>
+    <rdf:_18 rdf:nodeID="A16"/>
+    <rdf:_5 rdf:nodeID="A51"/>
+    <rdf:_2 rdf:nodeID="A2"/>
+    <rdf:_25 rdf:nodeID="A52"/>
+    <rdf:_4 rdf:nodeID="A53"/>
+    <rdf:_3 rdf:nodeID="A27"/>
+    <rdf:_19 rdf:nodeID="A37"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <ecos:value>CNAE#J6020</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A54">
+    <v:street-address>san salvador s/n 38200 S/C de Tenerife (Santa Cruz de Tenerife)</v:street-address>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A47">
+    <ecos:name xml:lang="en">Cables</ecos:name>
+    <ecos:name xml:lang="es">Cables</ecos:name>
+    <ecos:Code rdf:nodeID="A26"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A55">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A43">
+    <ecos:name xml:lang="en">Telecommunication devices</ecos:name>
+    <ecos:name xml:lang="es">Aparatos de telecomunicación</ecos:name>
+    <ecos:Code rdf:nodeID="A0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A42">
+    <ecos:name xml:lang="en">Technical service</ecos:name>
+    <ecos:name xml:lang="es">Servicio técnico</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <v:url>http://www.tdt-tenerife.com</v:url>
+    <v:tel rdf:nodeID="A56"/>
+    <v:tel rdf:nodeID="A1"/>
+    <v:org rdf:nodeID="A15"/>
+    <v:logo>http://www.vulka.es/imagenes/empresas_logos/1434609_logo-img.jpg</v:logo>
+    <v:fn>A.C.P.telecomunicaciones</v:fn>
+    <v:adr rdf:nodeID="A57"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A49">
+    <ecos:name xml:lang="en">Freeview installation</ecos:name>
+    <ecos:name xml:lang="es">Instalación tdt</ecos:name>
+    <ecos:Code rdf:nodeID="A58"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A53">
+    <ecos:name xml:lang="en">Parabolic antennas</ecos:name>
+    <ecos:name xml:lang="es">Antenas parabólicas</ecos:name>
+    <ecos:Code rdf:nodeID="A59"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A50">
+    <ecos:name xml:lang="en">Telephony</ecos:name>
+    <ecos:name xml:lang="es">Telefonía</ecos:name>
+    <ecos:Code rdf:nodeID="A60"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A36">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A56">
+    <rdf:value>655 783 518</rdf:value>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A59">
+    <ecos:value>CNAE#J6130</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A44">
+    <ecos:name xml:lang="en">Amplifier</ecos:name>
+    <ecos:name xml:lang="es">Amplificador</ecos:name>
+    <ecos:Code rdf:nodeID="A61"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A60">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <v:adr rdf:nodeID="A54"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A48">
+    <ecos:name xml:lang="en">Structured wiring</ecos:name>
+    <ecos:name xml:lang="es">Cableados estructurados</ecos:name>
+    <ecos:Code rdf:nodeID="A55"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A41">
+    <ecos:name xml:lang="en">Antenistas</ecos:name>
+    <ecos:name xml:lang="es">Antenistas</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A25">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A40">
+    <ecos:name xml:lang="en">Installing antennas</ecos:name>
+    <ecos:name xml:lang="es">Instalación antenas</ecos:name>
+    <ecos:Code rdf:nodeID="A39"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A57">
+    <v:street-address>san salvador s/n 38200 S/C de Tenerife (Santa Cruz de Tenerife)</v:street-address>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A52">
+    <ecos:name xml:lang="en">Television</ecos:name>
+    <ecos:name xml:lang="es">Televisión</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A45">
+    <ecos:name xml:lang="en">Antennas service</ecos:name>
+    <ecos:name xml:lang="es">Servicio técnico de antenas</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A58">
+    <ecos:value>CNAE#J6020</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A46">
+    <ecos:name xml:lang="en">Telephone installation</ecos:name>
+    <ecos:name xml:lang="es">Instalación telefónica</ecos:name>
+    <ecos:Code rdf:nodeID="A17"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A38">
+    <ecos:value>CNAE#J6130</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <ecos:detail xml:lang="en">Company dedicated to the installation of antennas both collective and individual, troubleshooting;&#xD;TDT.digital plus, telephony... etc... BUDGETS WITHOUT COMPROMISE.</ecos:detail>
+    <ecos:detail xml:lang="es">Empresa dedicada a la instalacion de antenas tanto colectivas,como individuales, reparacion de averias;&#xD;TDT.digital plus,telefonia...etc.. PRESUPUESTOS SIN COMPROMISOS.</ecos:detail>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A61">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A51">
+    <ecos:name xml:lang="en">TV antennas</ecos:name>
+    <ecos:name xml:lang="es">Antenas TV</ecos:name>
+  </rdf:Description>
+</rdf:RDF>

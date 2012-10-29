@@ -1,0 +1,258 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:ecos="http://kmm.lboro.ac.uk/ecos/1.0#"
+    xmlns:j.0="http://episteme.com/ns#"
+    xmlns:v="http://www.w3.org/2006/vcard/ns#" > 
+  <rdf:Description rdf:nodeID="A0">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <ecos:name xml:lang="en">Solar energy</ecos:name>
+    <ecos:name xml:lang="es">Energía solar</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <v:street-address>Campo Azálvaro, 5 05004 AVILA (Ávila)</v:street-address>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <ecos:name xml:lang="en">Electrical installations</ecos:name>
+    <ecos:name xml:lang="es">Instalaciones eléctricas</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:value>920 250 949</rdf:value>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Fax"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <ecos:name xml:lang="en">Home Automation</ecos:name>
+    <ecos:name xml:lang="es">Domótica</ecos:name>
+    <ecos:Code rdf:nodeID="A7"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <rdf:_23 rdf:nodeID="A9"/>
+    <rdf:_21 rdf:nodeID="A10"/>
+    <rdf:_13 rdf:nodeID="A11"/>
+    <rdf:_12 rdf:nodeID="A12"/>
+    <rdf:_6 rdf:nodeID="A13"/>
+    <rdf:_17 rdf:nodeID="A14"/>
+    <rdf:_15 rdf:nodeID="A15"/>
+    <rdf:_5 rdf:nodeID="A16"/>
+    <rdf:_3 rdf:nodeID="A17"/>
+    <rdf:_1 rdf:nodeID="A18"/>
+    <rdf:_11 rdf:nodeID="A19"/>
+    <rdf:_2 rdf:nodeID="A20"/>
+    <rdf:_18 rdf:nodeID="A2"/>
+    <rdf:_30 rdf:nodeID="A21"/>
+    <rdf:_4 rdf:nodeID="A22"/>
+    <rdf:_26 rdf:nodeID="A23"/>
+    <rdf:_7 rdf:nodeID="A24"/>
+    <rdf:_25 rdf:nodeID="A25"/>
+    <rdf:_27 rdf:nodeID="A26"/>
+    <rdf:_20 rdf:nodeID="A27"/>
+    <rdf:_10 rdf:nodeID="A28"/>
+    <rdf:_29 rdf:nodeID="A29"/>
+    <rdf:_14 rdf:nodeID="A30"/>
+    <rdf:_9 rdf:nodeID="A31"/>
+    <rdf:_16 rdf:nodeID="A6"/>
+    <rdf:_24 rdf:nodeID="A32"/>
+    <rdf:_28 rdf:nodeID="A33"/>
+    <rdf:_8 rdf:nodeID="A34"/>
+    <rdf:_19 rdf:nodeID="A35"/>
+    <rdf:_22 rdf:nodeID="A4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <ecos:name xml:lang="en">Heating boilers</ecos:name>
+    <ecos:name xml:lang="es">Calderas de calefacción</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A36">
+    <v:url>http://www.blascosa.com</v:url>
+    <v:tel rdf:nodeID="A37"/>
+    <v:tel rdf:nodeID="A5"/>
+    <v:org rdf:nodeID="A38"/>
+    <v:logo>http://www.vulka.es/imagenes/empresas_logos/523579_logo-img.jpg</v:logo>
+    <v:fn>BLASCO SUMINISTROS ELECTRICOS, S.A.</v:fn>
+    <v:adr rdf:nodeID="A39"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <ecos:name xml:lang="en">Antennas</ecos:name>
+    <ecos:name xml:lang="es">Antenas</ecos:name>
+    <ecos:Code rdf:nodeID="A40"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A38">
+    <v:organisation-name>BLASCO SUMINISTROS ELECTRICOS, S.A.</v:organisation-name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A24">
+    <ecos:name xml:lang="en">Water pump</ecos:name>
+    <ecos:name xml:lang="es">Bomba de agua</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <ecos:name xml:lang="en">Industrial facilities</ecos:name>
+    <ecos:name xml:lang="es">Instalaciones industriales</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <ecos:name xml:lang="en">Compressors</ecos:name>
+    <ecos:name xml:lang="es">Compresores</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A26">
+    <ecos:name xml:lang="en">Networks</ecos:name>
+    <ecos:name xml:lang="es">Redes</ecos:name>
+    <ecos:Code rdf:nodeID="A0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A35">
+    <ecos:name xml:lang="en">Solar thermal energy</ecos:name>
+    <ecos:name xml:lang="es">Energía solar térmica</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A41">
+    <v:adr rdf:nodeID="A3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <ecos:name xml:lang="en">Automation</ecos:name>
+    <ecos:name xml:lang="es">Automatización</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A37">
+    <rdf:value>920 221062-66</rdf:value>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A42">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <ecos:name xml:lang="en">Parabolic antennas</ecos:name>
+    <ecos:name xml:lang="es">Antenas parabólicas</ecos:name>
+    <ecos:Code rdf:nodeID="A43"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <ecos:name xml:lang="en">Boilers</ecos:name>
+    <ecos:name xml:lang="es">Calderas</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <ecos:name xml:lang="en">Ventilation</ecos:name>
+    <ecos:name xml:lang="es">Ventilación</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.vulka.es/empresa/blasco-suministros-electricos-s-a_523579.html">
+    <j.0:HasDataSource rdf:nodeID="A44"/>
+    <v:VCard rdf:nodeID="A36"/>
+    <ecos:Specific rdf:nodeID="A45"/>
+    <ecos:General rdf:nodeID="A46"/>
+    <rdf:type rdf:resource="http://kmm.lboro.ac.uk/ecos/1.0#Enterprise"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A47">
+    <ecos:value>CNAE#J6020</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <ecos:name xml:lang="en">Automatic doormen</ecos:name>
+    <ecos:name xml:lang="es">Porteros automáticos</ecos:name>
+    <ecos:Code rdf:nodeID="A48"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A30">
+    <ecos:name xml:lang="en">Air conditioners</ecos:name>
+    <ecos:name xml:lang="es">Climatizadores</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A49">
+    <ecos:value>CNAE#J6020</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A50">
+    <ecos:detail xml:lang="en">Distributors of leading brands in the sector of electrical equipment: Siemens, Simon, Osram, Obo-Bettermann, Legrand, Atlantic, Fuji, Orbis, Normalux, Miguélez, Gewiss, g. Electric, Himel, Hager, Televés. &#xD;LIGHTING, INDUSTRIAL, HOME AUTOMATION, HVAC, ELECTRICAL CONDUCTORS, MEDIUM VOLTAGE MATERIAL...&#xD;Delegations in TORREJON DE ARDOZ, FUENLABRADA, AVILA, SEGOVIA, VALLADOLID, VIGO</ecos:detail>
+    <ecos:detail xml:lang="es">Distribuidores de las principales marcas del sector de material electrico: Siemens, Simon, Osram, Obo-Bettermann,Legrand, Atlantic, Fuji, Orbis, Normalux, Miguelez, Gewiss, G. Electric, Himel, Hager, Televes. &#xD;ILUMINACION, MATERIAL INDUSTRIAL, DOMOTICA, CLIMATIZACION, CONDUCTORES ELECTRICOS, MEDIA TENSION...&#xD;Delagaciones en AVILA, SEGOVIA, VALLADOLID,TORREJON DE ARDOZ, FUENLABRADA Y VIGO</ecos:detail>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A45">
+    <ecos:Skill rdf:nodeID="A51"/>
+    <ecos:Plan rdf:nodeID="A50"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A52">
+    <v:VCard rdf:nodeID="A41"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <ecos:name xml:lang="en">Thermal energy</ecos:name>
+    <ecos:name xml:lang="es">Energía térmica</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A40">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <ecos:name xml:lang="en">Audio, sound and sound shops</ecos:name>
+    <ecos:name xml:lang="es">Audio, sonido y tiendas de sonido</ecos:name>
+    <ecos:Code rdf:nodeID="A1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A31">
+    <ecos:name xml:lang="en">Cables</ecos:name>
+    <ecos:name xml:lang="es">Cables</ecos:name>
+    <ecos:Code rdf:nodeID="A42"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A29">
+    <ecos:name xml:lang="en">Digital terrestrial television</ecos:name>
+    <ecos:name xml:lang="es">Televisión digital terrestre</ecos:name>
+    <ecos:Code rdf:nodeID="A49"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <ecos:name xml:lang="en">Heating</ecos:name>
+    <ecos:name xml:lang="es">Calefactores</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A25">
+    <ecos:name xml:lang="en">Lightning arrester</ecos:name>
+    <ecos:name xml:lang="es">Pararrayos</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <ecos:name xml:lang="en">Photovoltaic energy</ecos:name>
+    <ecos:name xml:lang="es">Energía fotovoltaica</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A48">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A53">
+    <ecos:uri>http://www.blascosa.com</ecos:uri>
+    <ecos:name>BLASCO SUMINISTROS ELECTRICOS, S.A.</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A44">
+    <j.0:DataSource rdf:resource="http://kmm.lboro.ac.uk/ecos/1.0#vulka"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A51">
+    <rdf:Bag rdf:nodeID="A8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A46">
+    <ecos:summary xml:lang="en">ELECTRICAL MATERIAL DISTRIBUTOR</ecos:summary>
+    <ecos:summary xml:lang="es">DISTRIBUIDOR DE MATERIAL ELECTRICO</ecos:summary>
+    <ecos:CompanyName rdf:nodeID="A53"/>
+    <ecos:Address rdf:nodeID="A52"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A34">
+    <ecos:name xml:lang="en">Light bulbs</ecos:name>
+    <ecos:name xml:lang="es">Bombillas</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A43">
+    <ecos:value>CNAE#J6130</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <ecos:name xml:lang="en">Electric generators</ecos:name>
+    <ecos:name xml:lang="es">Generadores eléctricos</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <ecos:name xml:lang="en">Automations</ecos:name>
+    <ecos:name xml:lang="es">Automatismos</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A39">
+    <v:street-address>Campo Azálvaro, 5 05004 AVILA (Ávila)</v:street-address>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A33">
+    <ecos:name xml:lang="en">DVB-t</ecos:name>
+    <ecos:name xml:lang="es">Tdt</ecos:name>
+    <ecos:Code rdf:nodeID="A47"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A32">
+    <ecos:name xml:lang="en">Solar panels</ecos:name>
+    <ecos:name xml:lang="es">Paneles solares</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <ecos:name xml:lang="en">Heating</ecos:name>
+    <ecos:name xml:lang="es">Calefacción</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <ecos:name xml:lang="en">Air conditioning</ecos:name>
+    <ecos:name xml:lang="es">Aire acondicionado</ecos:name>
+  </rdf:Description>
+</rdf:RDF>

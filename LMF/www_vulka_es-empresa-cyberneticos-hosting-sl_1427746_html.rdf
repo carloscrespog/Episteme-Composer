@@ -1,0 +1,301 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:ecos="http://kmm.lboro.ac.uk/ecos/1.0#"
+    xmlns:j.0="http://episteme.com/ns#"
+    xmlns:v="http://www.w3.org/2006/vcard/ns#" > 
+  <rdf:Description rdf:nodeID="A0">
+    <ecos:value>CNAE#J6010</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <ecos:value>CNAE#J6203</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <ecos:name xml:lang="en">Networks</ecos:name>
+    <ecos:name xml:lang="es">Redes</ecos:name>
+    <ecos:Code rdf:nodeID="A3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <v:url>http://www.cyberneticos.com</v:url>
+    <v:tel rdf:nodeID="A6"/>
+    <v:tel rdf:nodeID="A7"/>
+    <v:org rdf:nodeID="A8"/>
+    <v:logo>http://www.vulka.es/imagenes/empresas_logos/1427746_logo-img.jpg</v:logo>
+    <v:fn>CyberNETicos Hosting SL</v:fn>
+    <v:adr rdf:nodeID="A9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <ecos:name xml:lang="en">Model agencies</ecos:name>
+    <ecos:name xml:lang="es">Agencias de modelos</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <ecos:name xml:lang="en">Web design</ecos:name>
+    <ecos:name xml:lang="es">Diseño Web</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <ecos:name xml:lang="en">Software</ecos:name>
+    <ecos:name xml:lang="es">Software</ecos:name>
+    <ecos:Code rdf:nodeID="A13"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <ecos:name xml:lang="en">Media</ecos:name>
+    <ecos:name xml:lang="es">Medios de comunicación</ecos:name>
+    <ecos:Code rdf:nodeID="A15"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <ecos:name xml:lang="en">Online courses</ecos:name>
+    <ecos:name xml:lang="es">Cursos online</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <ecos:name xml:lang="en">Web pages</ecos:name>
+    <ecos:name xml:lang="es">Páginas Web</ecos:name>
+    <ecos:Code rdf:nodeID="A18"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <v:VCard rdf:nodeID="A20"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <v:organisation-name>CyberNETicos Hosting SL</v:organisation-name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <ecos:name xml:lang="en">Information technology companies</ecos:name>
+    <ecos:name xml:lang="es">Empresas de informática</ecos:name>
+    <ecos:Code rdf:nodeID="A22"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <ecos:value>CNAE#J6209</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <ecos:Skill rdf:nodeID="A24"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A25">
+    <ecos:value>CNAE#J6203</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A26">
+    <ecos:name xml:lang="en">Voice networks</ecos:name>
+    <ecos:name xml:lang="es">Redes voz</ecos:name>
+    <ecos:Code rdf:nodeID="A27"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A29">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A30">
+    <ecos:name xml:lang="en">Radio communications</ecos:name>
+    <ecos:name xml:lang="es">Radiocomunicaciones</ecos:name>
+    <ecos:Code rdf:nodeID="A0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A31">
+    <ecos:name xml:lang="en">Academies of information technology</ecos:name>
+    <ecos:name xml:lang="es">Academias de informática</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A32">
+    <ecos:value>CNAE#J6010</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A33">
+    <ecos:name xml:lang="en">Web</ecos:name>
+    <ecos:name xml:lang="es">Web</ecos:name>
+    <ecos:Code rdf:nodeID="A34"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A35">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A36">
+    <ecos:name xml:lang="en">Communications</ecos:name>
+    <ecos:name xml:lang="es">Comunicaciones</ecos:name>
+    <ecos:Code rdf:nodeID="A37"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A38">
+    <ecos:name xml:lang="en">Security systems</ecos:name>
+    <ecos:name xml:lang="es">Sistemas de seguridad</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A39">
+    <ecos:name xml:lang="en">Multimedia</ecos:name>
+    <ecos:name xml:lang="es">Multimedia</ecos:name>
+    <ecos:Code rdf:nodeID="A28"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <v:adr rdf:nodeID="A40"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A41">
+    <ecos:name xml:lang="en">Education institutes</ecos:name>
+    <ecos:name xml:lang="es">Institutos de enseñanza</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A24">
+    <rdf:Bag rdf:nodeID="A42"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <ecos:value>CNAE#J6203</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A43">
+    <ecos:name xml:lang="en">Cibera and chive cafes</ecos:name>
+    <ecos:name xml:lang="es">Cibera y chive cafés</ecos:name>
+    <ecos:Code rdf:nodeID="A4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A44">
+    <ecos:value>CNAE#J6201</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A45">
+    <j.0:DataSource rdf:resource="http://kmm.lboro.ac.uk/ecos/1.0#vulka"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:value>902003956-956929111</rdf:value>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A46">
+    <ecos:name xml:lang="en">Night club</ecos:name>
+    <ecos:name xml:lang="es">Night club</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A47">
+    <ecos:name xml:lang="en">Radio</ecos:name>
+    <ecos:name xml:lang="es">Radio</ecos:name>
+    <ecos:Code rdf:nodeID="A32"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A48">
+    <ecos:name xml:lang="en">Internet</ecos:name>
+    <ecos:name xml:lang="es">Internet</ecos:name>
+    <ecos:Code rdf:nodeID="A49"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A50">
+    <ecos:name xml:lang="en">Design</ecos:name>
+    <ecos:name xml:lang="es">Diseño</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A51">
+    <ecos:name xml:lang="en">TPV</ecos:name>
+    <ecos:name xml:lang="es">TPV</ecos:name>
+    <ecos:Code rdf:nodeID="A1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A52">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A40">
+    <v:street-address>Edificio Alfa C-1-2 Ctra. Rota - El Puerto KM 0,1 11500 El Puerto de Santa María (Cádiz)</v:street-address>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A53">
+    <ecos:name xml:lang="en">Systems</ecos:name>
+    <ecos:name xml:lang="es">Sistemas</ecos:name>
+    <ecos:Code rdf:nodeID="A25"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A54">
+    <ecos:value>CNAE#J6209</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A42">
+    <rdf:_17 rdf:nodeID="A17"/>
+    <rdf:_29 rdf:nodeID="A51"/>
+    <rdf:_15 rdf:nodeID="A39"/>
+    <rdf:_26 rdf:nodeID="A38"/>
+    <rdf:_27 rdf:nodeID="A12"/>
+    <rdf:_14 rdf:nodeID="A14"/>
+    <rdf:_19 rdf:nodeID="A47"/>
+    <rdf:_9 rdf:nodeID="A11"/>
+    <rdf:_5 rdf:nodeID="A36"/>
+    <rdf:_23 rdf:nodeID="A26"/>
+    <rdf:_6 rdf:nodeID="A16"/>
+    <rdf:_24 rdf:nodeID="A55"/>
+    <rdf:_3 rdf:nodeID="A56"/>
+    <rdf:_11 rdf:nodeID="A41"/>
+    <rdf:_8 rdf:nodeID="A57"/>
+    <rdf:_10 rdf:nodeID="A21"/>
+    <rdf:_22 rdf:nodeID="A58"/>
+    <rdf:_21 rdf:nodeID="A2"/>
+    <rdf:_25 rdf:nodeID="A53"/>
+    <rdf:_13 rdf:nodeID="A59"/>
+    <rdf:_12 rdf:nodeID="A48"/>
+    <rdf:_4 rdf:nodeID="A43"/>
+    <rdf:_30 rdf:nodeID="A33"/>
+    <rdf:_1 rdf:nodeID="A31"/>
+    <rdf:_16 rdf:nodeID="A46"/>
+    <rdf:_7 rdf:nodeID="A50"/>
+    <rdf:_2 rdf:nodeID="A10"/>
+    <rdf:_28 rdf:nodeID="A60"/>
+    <rdf:_18 rdf:nodeID="A61"/>
+    <rdf:_20 rdf:nodeID="A30"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A34">
+    <ecos:value>CNAE#J6312</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <v:street-address>Edificio Alfa C-1-2 Ctra. Rota - El Puerto KM 0,1 11500 El Puerto de Santa María (Cádiz)</v:street-address>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A56">
+    <ecos:name xml:lang="en">Audio, sound and sound shops</ecos:name>
+    <ecos:name xml:lang="es">Audio, sonido y tiendas de sonido</ecos:name>
+    <ecos:Code rdf:nodeID="A29"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A62">
+    <ecos:value>CNAE#J6209</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <ecos:value>CNAE#J6312</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A58">
+    <ecos:name xml:lang="en">Computer networks</ecos:name>
+    <ecos:name xml:lang="es">Redes informáticas</ecos:name>
+    <ecos:Code rdf:nodeID="A35"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <rdf:value>626514333</rdf:value>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Fax"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A59">
+    <ecos:name xml:lang="en">Public phones with Internet</ecos:name>
+    <ecos:name xml:lang="es">Locutorio con Internet</ecos:name>
+    <ecos:Code rdf:nodeID="A52"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A37">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.vulka.es/empresa/cyberneticos-hosting-sl_1427746.html">
+    <j.0:HasDataSource rdf:nodeID="A45"/>
+    <v:VCard rdf:nodeID="A5"/>
+    <ecos:Specific rdf:nodeID="A23"/>
+    <ecos:General rdf:nodeID="A63"/>
+    <rdf:type rdf:resource="http://kmm.lboro.ac.uk/ecos/1.0#Enterprise"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A61">
+    <ecos:name xml:lang="en">Computer programming</ecos:name>
+    <ecos:name xml:lang="es">Programación informática</ecos:name>
+    <ecos:Code rdf:nodeID="A44"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A60">
+    <ecos:name xml:lang="en">Computer stores</ecos:name>
+    <ecos:name xml:lang="es">Tiendas de informática</ecos:name>
+    <ecos:Code rdf:nodeID="A54"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A63">
+    <ecos:summary xml:lang="en">CyberNet is the leader in Andalusia company offering services in web hosting, dedicated servers, VPS, domain registration and internet audio streaming.</ecos:summary>
+    <ecos:summary xml:lang="es">CyberNETicos es la empresa lider en Andalucía ofreciendo servicios de alojamiento web, servidores dedicados, VPS, registro de dominios y streaming de audio por internet.</ecos:summary>
+    <ecos:CompanyName rdf:nodeID="A64"/>
+    <ecos:Address rdf:nodeID="A19"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A57">
+    <ecos:name xml:lang="en">Graphic design</ecos:name>
+    <ecos:name xml:lang="es">Diseño grafico</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A64">
+    <ecos:uri>http://www.cyberneticos.com</ecos:uri>
+    <ecos:name>CyberNETicos Hosting SL</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A49">
+    <ecos:value>CNAE#J6312</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A55">
+    <ecos:name xml:lang="en">Computer services</ecos:name>
+    <ecos:name xml:lang="es">Servicios informáticos</ecos:name>
+    <ecos:Code rdf:nodeID="A62"/>
+  </rdf:Description>
+</rdf:RDF>

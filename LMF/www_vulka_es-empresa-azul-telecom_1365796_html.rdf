@@ -1,0 +1,330 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:ecos="http://kmm.lboro.ac.uk/ecos/1.0#"
+    xmlns:j.0="http://episteme.com/ns#"
+    xmlns:v="http://www.w3.org/2006/vcard/ns#" > 
+  <rdf:Description rdf:nodeID="A0">
+    <ecos:name xml:lang="en">Wireless</ecos:name>
+    <ecos:name xml:lang="es">Wireless</ecos:name>
+    <ecos:Code rdf:nodeID="A1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <ecos:name xml:lang="en">Cleaning of facilities</ecos:name>
+    <ecos:name xml:lang="es">Limpieza de instalaciones</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <ecos:name xml:lang="en">WiFi</ecos:name>
+    <ecos:name xml:lang="es">Wifi</ecos:name>
+    <ecos:Code rdf:nodeID="A4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <ecos:value>CNAE#J6120</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <ecos:name xml:lang="en">Installation of telecommunication</ecos:name>
+    <ecos:name xml:lang="es">Instalación de telecomunicación</ecos:name>
+    <ecos:Code rdf:nodeID="A8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <rdf:value>911 014 621</rdf:value>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Fax"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <ecos:name xml:lang="en">Networks</ecos:name>
+    <ecos:name xml:lang="es">Redes</ecos:name>
+    <ecos:Code rdf:nodeID="A11"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <ecos:name xml:lang="en">Telecommunications Engineering</ecos:name>
+    <ecos:name xml:lang="es">Ingeniería en telecomunicaciones</ecos:name>
+    <ecos:Code rdf:nodeID="A13"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <ecos:name xml:lang="en">Telecommunications services</ecos:name>
+    <ecos:name xml:lang="es">Servicios de telecomunicaciones</ecos:name>
+    <ecos:Code rdf:nodeID="A16"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.vulka.es/empresa/azul-telecom_1365796.html">
+    <j.0:HasDataSource rdf:nodeID="A17"/>
+    <v:VCard rdf:nodeID="A18"/>
+    <ecos:Specific rdf:nodeID="A19"/>
+    <ecos:General rdf:nodeID="A20"/>
+    <rdf:type rdf:resource="http://kmm.lboro.ac.uk/ecos/1.0#Enterprise"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <ecos:name xml:lang="en">Telephone exchanges</ecos:name>
+    <ecos:name xml:lang="es">Centrales telefónicas</ecos:name>
+    <ecos:Code rdf:nodeID="A22"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <ecos:name xml:lang="en">Telephone repair</ecos:name>
+    <ecos:name xml:lang="es">Reparación telefónica</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A24">
+    <ecos:name xml:lang="en">Structured wiring</ecos:name>
+    <ecos:name xml:lang="es">Cableados estructurados</ecos:name>
+    <ecos:Code rdf:nodeID="A25"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A26">
+    <ecos:detail xml:lang="en">Blue Teleccom directs its services to companies and educational centres.&#xD;We offer services and consulting services for the design and installation of quality telecommunication systems.&#xD;Among other services we offer:&#xD;-Structured cabling for voice and data.&#xD;-Telephone switchboards.&#xD;-Sanitized facilities.&#xD;-Sound systems (PA, sound events, portable systems, sisetemas of evacuation, etc.)&#xD;-Wireless connectivity (WIFI, Laser, etc)&#xD;-Health care systems.&#xD;-Etc.&#xD;Quality in work and finishes, and a broad knowledge of the market we differ from our competition.&#xD;Blue Telecom always offers the possibility of maintenance once the installation is complete. In this way our clients are quiet and covered any questions or incidence.&#xD;We are at your disposal.</ecos:detail>
+    <ecos:detail xml:lang="es">Azul Teleccom dirige sus servicios a empresas y centros educativos.&#xD;Ofrecemos servicios y asesoría para el diseño y la instalación de sistemas de Telecomunicaciones de calidad.&#xD;Entre otros servicios ofrecemos:&#xD;- Cableados estructurados para Voz y Datos.&#xD;- Centralitas Telefónicas.&#xD;- Saneado de instalaciones.&#xD;- Sistemas de sonido (Megafonía, sonido para eventos, sistemas portátiles, sisetemas de evacuación,etc.)&#xD;- Conectividad inalámbrica (WIFI, Laser, etc)&#xD;- Sistemas Asistenciales.&#xD;- Etc.&#xD;La calidad en los trabajos y acabados, y un amplio conocimiento del mercado nos diferencian de nuestra competencia.&#xD;Azul Telecom siempre ofrece la posibilidad de mantenimiento una vez finalizada la instalación. De esta forma nuestros clientes están tranquilos y cubiertos ante cualquier duda o incidencia.&#xD;Estamos a su disposición.</ecos:detail>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <v:VCard rdf:nodeID="A28"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A29">
+    <ecos:name xml:lang="en">Telephone technical support</ecos:name>
+    <ecos:name xml:lang="es">Asistencia técnica telefónica</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <ecos:Skill rdf:nodeID="A30"/>
+    <ecos:Plan rdf:nodeID="A26"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A31">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A32">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A33">
+    <ecos:name xml:lang="en">Internet</ecos:name>
+    <ecos:name xml:lang="es">Internet</ecos:name>
+    <ecos:Code rdf:nodeID="A34"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A35">
+    <ecos:value>CNAE#J6110</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A36">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A37">
+    <ecos:value>CNAE#J6110</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A38">
+    <ecos:name xml:lang="en">VoIP</ecos:name>
+    <ecos:name xml:lang="es">Voip</ecos:name>
+    <ecos:Code rdf:nodeID="A36"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A39">
+    <v:organisation-name>AZUL TELECOM</v:organisation-name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A40">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A41">
+    <ecos:name xml:lang="en">Audio, sound and sound shops</ecos:name>
+    <ecos:name xml:lang="es">Audio, sonido y tiendas de sonido</ecos:name>
+    <ecos:Code rdf:nodeID="A42"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A43">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A44">
+    <ecos:name xml:lang="en">Fiber optic</ecos:name>
+    <ecos:name xml:lang="es">Fibra óptica</ecos:name>
+    <ecos:Code rdf:nodeID="A45"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A46">
+    <ecos:name xml:lang="en">Data networks</ecos:name>
+    <ecos:name xml:lang="es">Redes datos</ecos:name>
+    <ecos:Code rdf:nodeID="A14"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A47">
+    <ecos:name xml:lang="en">Mark</ecos:name>
+    <ecos:name xml:lang="es">Tarificadores</ecos:name>
+    <ecos:Code rdf:nodeID="A6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A48">
+    <ecos:name xml:lang="en">Cables</ecos:name>
+    <ecos:name xml:lang="es">Cables</ecos:name>
+    <ecos:Code rdf:nodeID="A49"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <ecos:summary xml:lang="en">Telephony, computer network, sound systems and Multimedia, WIFI networks, advanced telecommunications systems.</ecos:summary>
+    <ecos:summary xml:lang="es">Telefonía, Redes Informáticas, Sistemas de Sonido y Multimedia, Redes WIFI, Sistemas de Telecomunicaciones avanzados.</ecos:summary>
+    <ecos:CompanyName rdf:nodeID="A50"/>
+    <ecos:Address rdf:nodeID="A27"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A51">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A25">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A50">
+    <ecos:uri>http://www.azultelecom.es</ecos:uri>
+    <ecos:name>AZUL TELECOM</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A52">
+    <ecos:name xml:lang="en">Voice and data network facilities</ecos:name>
+    <ecos:name xml:lang="es">Instalaciones de red de voz y datos</ecos:name>
+    <ecos:Code rdf:nodeID="A51"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A53">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A54">
+    <v:street-address>Meléndez Valdés, 60 28015 MADRID (Madrid)</v:street-address>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A42">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A45">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A55">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A56">
+    <ecos:name xml:lang="en">IP telephony</ecos:name>
+    <ecos:name xml:lang="es">Telefonía IP</ecos:name>
+    <ecos:Code rdf:nodeID="A53"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <ecos:value>CNAE#J6120</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A57">
+    <ecos:name xml:lang="en">Communications</ecos:name>
+    <ecos:name xml:lang="es">Comunicaciones</ecos:name>
+    <ecos:Code rdf:nodeID="A5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A34">
+    <ecos:value>CNAE#J6312</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A58">
+    <v:street-address>Meléndez Valdés, 60 28015 MADRID (Madrid)</v:street-address>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A59">
+    <ecos:name xml:lang="en">Computer networks</ecos:name>
+    <ecos:name xml:lang="es">Redes informáticas</ecos:name>
+    <ecos:Code rdf:nodeID="A43"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A60">
+    <rdf:_30 rdf:nodeID="A0"/>
+    <rdf:_26 rdf:nodeID="A61"/>
+    <rdf:_23 rdf:nodeID="A23"/>
+    <rdf:_21 rdf:nodeID="A59"/>
+    <rdf:_6 rdf:nodeID="A62"/>
+    <rdf:_28 rdf:nodeID="A38"/>
+    <rdf:_24 rdf:nodeID="A15"/>
+    <rdf:_22 rdf:nodeID="A63"/>
+    <rdf:_12 rdf:nodeID="A44"/>
+    <rdf:_10 rdf:nodeID="A64"/>
+    <rdf:_13 rdf:nodeID="A12"/>
+    <rdf:_11 rdf:nodeID="A57"/>
+    <rdf:_5 rdf:nodeID="A65"/>
+    <rdf:_2 rdf:nodeID="A66"/>
+    <rdf:_25 rdf:nodeID="A47"/>
+    <rdf:_4 rdf:nodeID="A41"/>
+    <rdf:_1 rdf:nodeID="A67"/>
+    <rdf:_20 rdf:nodeID="A46"/>
+    <rdf:_16 rdf:nodeID="A52"/>
+    <rdf:_18 rdf:nodeID="A2"/>
+    <rdf:_29 rdf:nodeID="A3"/>
+    <rdf:_19 rdf:nodeID="A10"/>
+    <rdf:_17 rdf:nodeID="A33"/>
+    <rdf:_14 rdf:nodeID="A7"/>
+    <rdf:_3 rdf:nodeID="A29"/>
+    <rdf:_15 rdf:nodeID="A68"/>
+    <rdf:_7 rdf:nodeID="A24"/>
+    <rdf:_8 rdf:nodeID="A48"/>
+    <rdf:_27 rdf:nodeID="A56"/>
+    <rdf:_9 rdf:nodeID="A21"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A67">
+    <ecos:name xml:lang="en">Telephony articles</ecos:name>
+    <ecos:name xml:lang="es">Artículos de telefonía</ecos:name>
+    <ecos:Code rdf:nodeID="A55"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A49">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A65">
+    <ecos:name xml:lang="en">Voice cabling</ecos:name>
+    <ecos:name xml:lang="es">Cableado de voz</ecos:name>
+    <ecos:Code rdf:nodeID="A35"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A68">
+    <ecos:name xml:lang="en">Telephone installation</ecos:name>
+    <ecos:name xml:lang="es">Instalación telefónica</ecos:name>
+    <ecos:Code rdf:nodeID="A32"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <v:url>http://www.azultelecom.es</v:url>
+    <v:tel rdf:nodeID="A69"/>
+    <v:tel rdf:nodeID="A9"/>
+    <v:org rdf:nodeID="A39"/>
+    <v:logo>http://www.vulka.es/imagenes/empresas_logos/1365796_logo-img.jpg</v:logo>
+    <v:fn>AZUL TELECOM</v:fn>
+    <v:adr rdf:nodeID="A54"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A70">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A69">
+    <rdf:value>902 955 249</rdf:value>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A71">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A61">
+    <ecos:name xml:lang="en">Telephony</ecos:name>
+    <ecos:name xml:lang="es">Telefonía</ecos:name>
+    <ecos:Code rdf:nodeID="A70"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A64">
+    <ecos:name xml:lang="en">IP telephone switchboards</ecos:name>
+    <ecos:name xml:lang="es">Centralitas telefónicas IP</ecos:name>
+    <ecos:Code rdf:nodeID="A37"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <j.0:DataSource rdf:resource="http://kmm.lboro.ac.uk/ecos/1.0#vulka"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <v:adr rdf:nodeID="A58"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A63">
+    <ecos:name xml:lang="en">Voice networks</ecos:name>
+    <ecos:name xml:lang="es">Redes voz</ecos:name>
+    <ecos:Code rdf:nodeID="A40"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A66">
+    <ecos:name xml:lang="en">Consulting in telecommunications</ecos:name>
+    <ecos:name xml:lang="es">Asesoría en telecomunicación</ecos:name>
+    <ecos:Code rdf:nodeID="A71"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A30">
+    <rdf:Bag rdf:nodeID="A60"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <ecos:value>CNAE#J6110</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A62">
+    <ecos:name xml:lang="en">Wired</ecos:name>
+    <ecos:name xml:lang="es">Cableados</ecos:name>
+    <ecos:Code rdf:nodeID="A31"/>
+  </rdf:Description>
+</rdf:RDF>

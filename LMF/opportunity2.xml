@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:gsi="http://www.gsi.dit.upm.es/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <gsi:Opportunity rdf:about="opportunity1">
+    <gsi:name>Opportunity1</gsi:name>
+    <gsi:description>A great opportunity</gsi:description>
+    <gsi:contractor>GSI</gsi:contractor>
+    <gsi:budget>5000</gsi:budget>
+    <gsi:localization>Madrid</gsi:localization>
+    <gsi:beginDate>10-10-2012</gsi:beginDate>
+    <gsi:endDate>10-17-2012</gsi:endDate>
+	<gsi:requirement rdf:parseType="Resource">
+		<gsi:filter>Activity</gsi:filter>
+		<gsi:field>Web development</gsi:field>
+		<gsi:weight>0.5</gsi:weight>
+	</gsi:requirement>
+	<gsi:requirement rdf:parseType="Resource">
+		<gsi:filter>Province</gsi:filter>
+		<gsi:field>Madrid</gsi:field>
+		<gsi:weight>0.25</gsi:weight>
+	</gsi:requirement >
+	<gsi:requirement rdf:parseType="Resource">
+		<gsi:filter>Type</gsi:filter>
+		<gsi:field>University</gsi:field>
+		<gsi:weight>0.25</gsi:weight>
+	</gsi:requirement>
+	<gsi:requirement rdf:parseType="Resource">
+		<gsi:filter>Activity</gsi:filter>
+		<gsi:field>Big Data</gsi:field>
+		<gsi:weight>0.25</gsi:weight>
+	</gsi:requirement>
+	<gsi:requirement rdf:parseType="Resource">
+		<gsi:filter>Province</gsi:filter>
+		<gsi:field>Barcelona</gsi:field>
+		<gsi:weight>0.5</gsi:weight>
+	</gsi:requirement>
+	<gsi:requirement rdf:parseType="Resource">
+		<gsi:filter>Activity</gsi:filter>
+		<gsi:field>Databases</gsi:field>
+		<gsi:weight>0.25</gsi:weight>
+	</gsi:requirement>
+  </gsi:Opportunity>
+</rdf:RDF>

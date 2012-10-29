@@ -478,7 +478,7 @@ body {
     box-shadow: 0 0 0;
   }
 
-  #main-content  .add-arrow, #main-content .back-arrow, #main-content .tick -arrow  {
+  #main-content  .add-arrow, #main-content .back-arrow, #main-content .tick-arrow  {
     display: block;
     cursor: pointer;
     width: 50px; 
@@ -741,12 +741,18 @@ body {
     float: right;
     margin-top: 15px;
   }
-  #new-widget.add-arrow{
+   #done-button,#new-company-entry{
     float:right;
+    height: 50px;
+    width: 50px;
   }
-  #currentselection{
+   .add-arrow{
+    margin:auto;
+    height: 50px;
+    width: 50px;
+  }
 
-  }
+
   .widgetArea a,#endPanel a{
     text-decoration: none;
     color:#666;
@@ -755,6 +761,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 12em;
+    
   }
   #endPanel{
     font-size: 17px;
@@ -770,3 +777,62 @@ body {
   #endPanel ul li{
     padding-top: 10px;
   }
+  #step-1 #wizLabelDescription {
+    vertical-align: top;
+  }
+  #step-1 #wizDescription{
+    height: 160px;
+  }
+  .weightAmount{
+    border: 0;
+    color: #f6931f; 
+    font-weight: bold;
+  }
+  #tableCompanies{
+    table-layout : fixed;
+    width: 900px;
+    line-height:3em;
+  }
+  #tableCompaniesCompleted{
+    table-layout : fixed;
+    width: 900px;
+    line-height:1.5em;
+  }
+  #tableCompanies .weightAmount,#tableCompaniesCompleted .weightAmount{
+    
+    width: 35px;
+    padding-left: 10px;
+  }
+  #tableCompanies th, #tableCompaniesCompleted th{
+    text-align:center;
+    font-weight: bold;
+    vertical-align: middle;
+
+  }
+  #tableCompanies td,#tableCompaniesCompleted td{
+    text-align:center;
+    vertical-align: middle;
+  }
+
+
+  #tableCompanies select{
+    width: 200px;
+  }
+#tableCompanies select,.weightSlider{
+    width: 170px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

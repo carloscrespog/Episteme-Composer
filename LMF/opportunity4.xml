@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+	xmlns:gsi="http://www.gsi.dit.upm.es/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:ecos="http://kmm.lboro.ac.uk/ecos/1.0#">
+	<rdf:Description rdf:about="opportunity1">
+		<ecos:name>Opportunity1</ecos:name>
+		<ecos:detail>A great opportunity</ecos:detail>
+		<gsi:contractor>GSI</gsi:contractor>
+		<gsi:budget>5000</gsi:budget>
+		<ecos:Address>Madrid</ecos:Address>
+		<gsi:beginDate>10-10-2012</gsi:beginDate>
+		<gsi:endDate>10-17-2012</gsi:endDate>
+		<gsi:companyReq rdf:nodeID="CompanyReq1"/>
+		<gsi:companyReq rdf:nodeID="CompanyReq2"/>
+		
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="CompanyReq1" ecos:Preference="Preference1" >
+		<gsi:filter>Activity</gsi:filter>
+		<gsi:field>Web development</gsi:field>
+		<ecos:weight>0.5</ecos:weight>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="CompanyReq1" ecos:Preference="Preference2" >
+		<gsi:filter>Province</gsi:filter>
+		<gsi:field>Madrid</gsi:field>
+		<ecos:weight>0.25</ecos:weight>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="CompanyReq1" ecos:Preference="Preference3" >
+		<gsi:filter>Type</gsi:filter>
+		<gsi:field>University</gsi:field>
+		<ecos:weight>0.25</ecos:weight>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="CompanyReq2" ecos:Preference="Preference1" >
+		<gsi:filter>Activity</gsi:filter>
+		<gsi:field>Big Data</gsi:field>
+		<ecos:weight>0.25</ecos:weight>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="CompanyReq2" ecos:Preference="Preference2" >
+		<gsi:filter>Province</gsi:filter>
+		<gsi:field>Barcelona</gsi:field>
+		<ecos:weight>0.5</ecos:weight>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="CompanyReq2" ecos:Preference="Preference3" >
+		<gsi:filter>Activity</gsi:filter>
+		<gsi:field>Databases</gsi:field>
+		<ecos:weight>0.25</ecos:weight>
+	</rdf:Description>
+</rdf:RDF>

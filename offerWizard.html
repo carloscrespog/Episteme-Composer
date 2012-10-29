@@ -18,6 +18,7 @@
  <script type="text/javascript" src="js/jquery-ui-1.8.22.custom.min.js"></script>
  <script type="text/javascript" src="js/jquery.wizard.user.js"></script>
  <script type="text/javascript" src="js/jquery.smartWizard-2.0.min.js"></script>    
+  <script type="text/javascript" src="js/knockout-2.1.0.js"></script>  
 
 </head>
 
@@ -45,8 +46,8 @@
            <li><a href="#step-2">
             <label class="stepNumber">2</label>
             <span class="stepDesc">
-             Administrativos<br />
-             <small>Campos administrativos</small>
+             Detalles<br />
+             <small>Detalles administrativos</small>
            </span>
          </a></li>
          <li><a href="#step-3">
@@ -69,108 +70,122 @@
     <h2 class="StepTitle">Información general sobre la oferta:</h2>
     <div class="skill-level-closure">
       <label for="offerName">Nombre de la oferta:  </label>
-      <input type="text" name="offerName" value="" class="txtBox">
+      <input type="text" name="offerName" value="" class="txtBox" placeholder="Introduzca el nombre de su oferta" data-bind="value: offerName">
     </div>
     <div class="skill-level-closure">
-      <label for="description">Descripción de la oferta:  </label>
-      <input type="text" name="description" value="" class="txtBox">
-    </div>
-    <div class="skill-level-closure">
-      <label for="employer">Contratante: </label>
-      <input type="text" name="employer" value="" class="txtBox">
-    </div>
-    <div class="skill-level-closure">
-      <label for="remuneration">Remuneración:</label>
+      <label id="wizLabelDescription" for="description">Descripción de la oferta:  </label>
+      <textArea id="wizDescription" name="description" value="" class="txtBox" placeholder="Introduzca la descripción de su oferta" data-bind="value: description"></textArea>
 
-      <input type="text" name="remuneration" id="remuneration" value="" class="txtBox">
-      <div id="slider-range"></div>
+
     </div>
 
   </div>
   <div id="step-2">
     <h2 class="StepTitle">Datos administrativos:</h2> 
     <div class="skill-level-closure">
-      <label for="localization">Localización:  </label>
-      <input type="text" name="localization" value="" class="txtBox">
+      <label for="contractor">Contratante: </label>
+      <input type="text" name="contractor" value="" class="txtBox" placeholder="Introduzca la compañía contratante" data-bind="value: contractor">
     </div>
     <div class="skill-level-closure">
-      <label for="budget">Presupuesto:  </label>
-      <input type="text" name="budget" id="budget" value="" class="txtBox">
-      <div id="slider"></div>
+      <label for="budget">Remuneración: </label>
+      <input type="text" name="budget" value="" class="txtBox" placeholder="Presupuesto de la oportunidad" data-bind="value: budget">
     </div>
     <div class="skill-level-closure">
-      <label for="date">Fecha de finalización: </label>
-      <input type="text" name="date" id="datepicker" value="" >
+      <label for="Address">Localización:  </label>
+      <input type="text" name="Address" value="" class="txtBox" placeholder="Introduzca la dirección" data-bind="value: address">
+    </div>
+    <div class="skill-level-closure">
+      <label for="beginDate">Fecha de inicio: </label>
+      <input type="text" name="beginDate" id="datepickerI" value="" placeholder="Click para seleccionar fecha" /><strong data-bind="value: beginDate"></strong>
+    </div>
+    <div class="skill-level-closure">
+      <label for="endDate">Fecha de finalización: </label>
+      <input type="text" name="endDate" id="datepickerF" value="" placeholder="Click para seleccionar fecha" /><strong data-bind="value: endDate"></strong>
     </div>
   </div>                      
   <div id="step-3" style="overflow: auto">
-    <h2 class="StepTitle">Compañías necesarias para su oferta</h2>   
+    <h2 class="StepTitle">Compañía <span data-bind="text: currentCompany"></span></h2> 
+    <table id="tableCompaniesCompleted" style="display:none" data-bind="foreach: companyGapArray">
+      <thead>
+        <tr>
+          <th>Compañía <span data-bind= "text: $index()+1"></span></th>
+          <th>Habilidad</th>
+          <th>Peso </th>
+        </tr>
+      </thead>
+      <tbody data-bind="foreach: $data">
+        <tr >
+          <td data-bind="text: 'Requisito '+($index()+1)"></td>
+          <td data-bind="text: field"></td>
+          <td class='weightAmount' data-bind="text: weight"></td>
+        </tr>
+      </tbody>
+    </table>  
+    <table id="tableCompanies">
+      <thead>
+        <tr>
+          <th><div id="new_offer_entry" class="add-arrow" title="Añade requisito"></div></th>
+          <th>Sector</th>
+          <th>Habilidad</th>
+          <th>Peso ( Restante: <span id="weightLeft" data-bind="text: weightLeft"></span> % )</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="companyGap" id="act0">
+          <th>
+            Requisito 1
+          </th>
+          <td >
 
-    <div class="skill-level-closure">
-      <label for="sector">Sector de la empresa:  </label>
-      <select  id="sector" name="activity">
-        <option value="Web_programming">Programación Web</option>
-        <option value="Graphic_applications">Diseño Gráfico</option>
-        <option value="Office_applications">Aplicaciones Ofimáticas</option>
-        <option value="Relational_databases">BBDD Relacionales</option>
-        <option value="Oracle">Oracle</option>
-        <option value="JavaScript">JavaScript</option>
-        <option value="VisualBasic">VisualBasic</option>
-        <option value="VisualBasic">Innovación en teorías, métodos y aplicaciones de técnicas de inteligencia artificial</option>
-      </select>
-      <div id="new_offer_entry" class="add-arrow" style="float: right; margin-top: -15px;"></div>
-      <div class="clear"></div>
-    </div>
-    <div class="skill-level-closure activity-level" id="act0">
-      <label for="activity">Actividad que desarrolla:</label>
-      <select  class="activity" name="activity">
-        <option value=" "> - </option>
 
-      </select>
-      
-    </div>
-     <div class="clear"></div>
-      <div id="done-button" class="tick-arrow" style="float: right"></div>
+            <select  class="sector" name="activity" >
+              <option value=" "> - </option>
+            </select>
+          </td>
+          <td>
+            <select  class="activity" name="activity" >
+              <option value=" "> - </option>
 
-    
-    <div class="skill-level-closure "style="display:none">
-      <label for="experience">Experiencia: </label>
-      <input type="text" name="experience" id="experience"value="" class="txtBox">
-      <div id="expSlider"></div>
-    </div>
+            </select>
+          </td>
+          <td>
+            <div >
+              <div class="weightSlider" style="display:inline-block"></div>
+              <input type="text" class="weightAmount" />
+            </div>
+          </td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div class="clear"></div>
+    <div id="done-button" class="tick-arrow" title="Finalizar requisitos de compañía"></div>
+    <div id="new-company-entry" class="add-arrow" title="Añadir nueva compañía" style="display: none"></div>
 
   </div>
   <div id="step-4"style="overflow: auto">
     <h2 class="StepTitle">Resumen de la oferta creada</h2>   
+    
     <div class="skill-level-closure">
-      <label >Nombre de la oferta:  </label>Episteme UI
+      <label >Nombre de la oferta:  </label><strong data-bind="text: offerName"></strong>
     </div>
     <div class="skill-level-closure">
-      <label >Descripción de la oferta:  </label>Interfaz gráfica en html y jquery
+      <label >Descripción de la oferta:  </label><strong data-bind="text: description"></strong>
     </div>
     <div class="skill-level-closure">
-      <label >Contratante:  </label>GSI
+      <label >Contratante:  </label><strong data-bind="text: contractor"></strong>
     </div>
     <div class="skill-level-closure">
-      <label >Remuneración:  </label>€1500 - €2000
+      <label >Remuneración:  </label><strong data-bind="text: budget"></strong>
     </div> 
     <div class="skill-level-closure">
-      <label >Localización:  </label>ETSIT - UPM
+      <label >Localización:  </label><strong data-bind="text: address"></strong>
     </div> 
     <div class="skill-level-closure">
-      <label >Presupuesto:  </label>€8600
+      <label >Fecha de inicio:  </label><strong data-bind="text: beginDate"></strong>
     </div> 
     <div class="skill-level-closure">
-      <label >Fecha de finalización:  </label>12/24/2012
-    </div> 
-    <div class="skill-level-closure">
-      <label >Tipo de empresa:  </label>Centro Público de Investigación
-    </div>                  
-    <div class="skill-level-closure">
-      <label >Actividad que desarrolla:  </label>Innovación en teorías, métodos y aplicaciones de técnicas de inteligencia artificial
-    </div> 
-    <div class="skill-level-closure">
-      <label >Experiencia:  </label>9 años
+      <label >Fecha de finalización:  </label><strong data-bind="text: endDate"></strong>
     </div>     
   </div>
 

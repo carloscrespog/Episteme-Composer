@@ -1,0 +1,246 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:ecos="http://kmm.lboro.ac.uk/ecos/1.0#"
+    xmlns:j.0="http://episteme.com/ns#"
+    xmlns:v="http://www.w3.org/2006/vcard/ns#" > 
+  <rdf:Description rdf:nodeID="A0">
+    <ecos:name xml:lang="en">Digital camcorder</ecos:name>
+    <ecos:name xml:lang="es">Videocámara digital</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <ecos:summary xml:lang="en">Graphic and web design, programming, photography, digital video, SEO and online marketing</ecos:summary>
+    <ecos:summary xml:lang="es">Diseño gráfico y web, programación, fotografía, vídeo digital, SEO y marketing online</ecos:summary>
+    <ecos:CompanyName rdf:nodeID="A2"/>
+    <ecos:Address rdf:nodeID="A3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <ecos:name xml:lang="en">Business services</ecos:name>
+    <ecos:name xml:lang="es">Servicios empresariales</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <ecos:name xml:lang="en">Multimedia</ecos:name>
+    <ecos:name xml:lang="es">Multimedia</ecos:name>
+    <ecos:Code rdf:nodeID="A6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <rdf:_23 rdf:nodeID="A8"/>
+    <rdf:_15 rdf:nodeID="A9"/>
+    <rdf:_20 rdf:nodeID="A10"/>
+    <rdf:_8 rdf:nodeID="A11"/>
+    <rdf:_16 rdf:nodeID="A12"/>
+    <rdf:_22 rdf:nodeID="A13"/>
+    <rdf:_14 rdf:nodeID="A14"/>
+    <rdf:_2 rdf:nodeID="A15"/>
+    <rdf:_18 rdf:nodeID="A16"/>
+    <rdf:_10 rdf:nodeID="A17"/>
+    <rdf:_9 rdf:nodeID="A18"/>
+    <rdf:_4 rdf:nodeID="A19"/>
+    <rdf:_7 rdf:nodeID="A20"/>
+    <rdf:_3 rdf:nodeID="A21"/>
+    <rdf:_26 rdf:nodeID="A22"/>
+    <rdf:_19 rdf:nodeID="A23"/>
+    <rdf:_12 rdf:nodeID="A24"/>
+    <rdf:_21 rdf:nodeID="A4"/>
+    <rdf:_17 rdf:nodeID="A5"/>
+    <rdf:_13 rdf:nodeID="A25"/>
+    <rdf:_1 rdf:nodeID="A26"/>
+    <rdf:_25 rdf:nodeID="A0"/>
+    <rdf:_6 rdf:nodeID="A27"/>
+    <rdf:_11 rdf:nodeID="A28"/>
+    <rdf:_5 rdf:nodeID="A29"/>
+    <rdf:_24 rdf:nodeID="A30"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A31">
+    <v:street-address>Calle Granados 33204 Gijón (Asturias)</v:street-address>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <ecos:value>CNAE#J6190</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A32">
+    <ecos:value>CNAE#J6201</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A33">
+    <ecos:value>CNAE#J6203</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A24">
+    <ecos:name xml:lang="en">Computer engineering</ecos:name>
+    <ecos:name xml:lang="es">Ingeniería informática</ecos:name>
+    <ecos:Code rdf:nodeID="A34"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <ecos:uri>http://www.galernaestudio.com/</ecos:uri>
+    <ecos:name>GALERNA ESTUDIO</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <ecos:name xml:lang="en">Promotional marketing</ecos:name>
+    <ecos:name xml:lang="es">Marketing promocional</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <ecos:name xml:lang="en">Flyers</ecos:name>
+    <ecos:name xml:lang="es">Flyers</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A35">
+    <ecos:value>CNAE#J6312</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <ecos:name xml:lang="en">Domains</ecos:name>
+    <ecos:name xml:lang="es">Dominios</ecos:name>
+    <ecos:Code rdf:nodeID="A36"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <ecos:name xml:lang="en">Web</ecos:name>
+    <ecos:name xml:lang="es">Web</ecos:name>
+    <ecos:Code rdf:nodeID="A37"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <v:VCard rdf:nodeID="A38"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <ecos:name xml:lang="en">Computer services</ecos:name>
+    <ecos:name xml:lang="es">Servicios informáticos</ecos:name>
+    <ecos:Code rdf:nodeID="A39"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <ecos:name xml:lang="en">Web pages</ecos:name>
+    <ecos:name xml:lang="es">Páginas Web</ecos:name>
+    <ecos:Code rdf:nodeID="A40"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A41">
+    <v:organisation-name>GALERNA ESTUDIO</v:organisation-name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A42">
+    <j.0:DataSource rdf:resource="http://kmm.lboro.ac.uk/ecos/1.0#vulka"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A40">
+    <ecos:value>CNAE#J6312</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A25">
+    <ecos:name xml:lang="en">Internet</ecos:name>
+    <ecos:name xml:lang="es">Internet</ecos:name>
+    <ecos:Code rdf:nodeID="A35"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A37">
+    <ecos:value>CNAE#J6312</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <ecos:name xml:lang="en">Photo studios</ecos:name>
+    <ecos:name xml:lang="es">Estudios de fotografía</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <ecos:name xml:lang="en">Web design</ecos:name>
+    <ecos:name xml:lang="es">Diseño Web</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.vulka.es/empresa/galerna-estudio_727004.html">
+    <j.0:HasDataSource rdf:nodeID="A42"/>
+    <v:VCard rdf:nodeID="A43"/>
+    <ecos:Specific rdf:nodeID="A44"/>
+    <ecos:General rdf:nodeID="A1"/>
+    <rdf:type rdf:resource="http://kmm.lboro.ac.uk/ecos/1.0#Enterprise"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A34">
+    <ecos:value>CNAE#M71</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A44">
+    <ecos:Skill rdf:nodeID="A45"/>
+    <ecos:Plan rdf:nodeID="A46"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <ecos:name xml:lang="en">Photographers</ecos:name>
+    <ecos:name xml:lang="es">Fotógrafos</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <ecos:name xml:lang="en">Computer programming</ecos:name>
+    <ecos:name xml:lang="es">Programación informática</ecos:name>
+    <ecos:Code rdf:nodeID="A47"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A46">
+    <ecos:detail xml:lang="en">Galerna Studio is a company located in Cantabria and Asturias with more than 10 years of experience, dedicated to providing corporate and graphic design services, design websites, commercial photography, corporate videos for Internet or DVD, management and maintenance of web pages, SEO/search engine optimization and Internet marketing.&#xD;Our focus is to offer quality solutions adapted to every budget both freelancers and enterprises (SMEs) and at the same time advising them that explode to maximize its presence on the Internet in order to increase its commercial activity.</ecos:detail>
+    <ecos:detail xml:lang="es">Galerna Estudio es una empresa ubicada en Cantabria y Asturias con más de 10 años de experiencia, dedicada a proveer servicios de diseño gráfico y corporativo, diseño de páginas web, fotografía comercial, videos de empresa para Internet o DVD, gestión y mantenimiento de páginas web, SEO/posicionamiento natural y marketing en Internet .&#xD;Nuestro objetivo se centra en ofrecer soluciones de calidad adaptadas a cada presupuesto tanto a autónomos como a empresas (Pymes) y al mismo tiempo asesorarles para que exploten al máximo su presencia en Internet con el fin de aumentar su actividad comercial.</ecos:detail>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <ecos:name xml:lang="en">Logos</ecos:name>
+    <ecos:name xml:lang="es">Logotipos</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A48">
+    <rdf:value>985331381</rdf:value>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Fax"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <ecos:name xml:lang="en">Software</ecos:name>
+    <ecos:name xml:lang="es">Software</ecos:name>
+    <ecos:Code rdf:nodeID="A33"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A38">
+    <v:adr rdf:nodeID="A49"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A47">
+    <ecos:value>CNAE#J6201</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A50">
+    <ecos:value>CNAE#J6209</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <ecos:name xml:lang="en">Graphic design</ecos:name>
+    <ecos:name xml:lang="es">Diseño grafico</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <ecos:name xml:lang="en">Information technology companies</ecos:name>
+    <ecos:name xml:lang="es">Empresas de informática</ecos:name>
+    <ecos:Code rdf:nodeID="A50"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A39">
+    <ecos:value>CNAE#J6209</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <ecos:name xml:lang="en">Door to door services</ecos:name>
+    <ecos:name xml:lang="es">Servicios a domicilio</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A45">
+    <rdf:Bag rdf:nodeID="A7"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <ecos:name xml:lang="en">Graphic printing</ecos:name>
+    <ecos:name xml:lang="es">Impresión gráfica</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <ecos:name xml:lang="en">Brochures</ecos:name>
+    <ecos:name xml:lang="es">Folletos</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A30">
+    <ecos:name xml:lang="en">Business cards</ecos:name>
+    <ecos:name xml:lang="es">Tarjetas de visita</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <ecos:name xml:lang="en">Computer maintenance</ecos:name>
+    <ecos:name xml:lang="es">Mantenimiento informático</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A51">
+    <rdf:value>620062376</rdf:value>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A43">
+    <v:url>http://www.galernaestudio.com/</v:url>
+    <v:tel rdf:nodeID="A51"/>
+    <v:tel rdf:nodeID="A48"/>
+    <v:org rdf:nodeID="A41"/>
+    <v:logo>http://www.vulka.es/imagenes/empresas_logos/727004_logo-img.jpg</v:logo>
+    <v:fn>GALERNA ESTUDIO</v:fn>
+    <v:adr rdf:nodeID="A31"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A29">
+    <ecos:name xml:lang="en">Email marketing</ecos:name>
+    <ecos:name xml:lang="es">Email marketing</ecos:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A49">
+    <v:street-address>Calle Granados 33204 Gijón (Asturias)</v:street-address>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A36">
+    <ecos:value>CNAE#J6311</ecos:value>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A26">
+    <ecos:name xml:lang="en">Development of tailor-made programme</ecos:name>
+    <ecos:name xml:lang="es">Desarrollo de programa a medida</ecos:name>
+    <ecos:Code rdf:nodeID="A32"/>
+  </rdf:Description>
+</rdf:RDF>
