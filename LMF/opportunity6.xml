@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+	xmlns:gsi="http://www.gsi.dit.upm.es/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:ecos="http://kmm.lboro.ac.uk/ecos/1.0#">
+	<rdf:Description rdf:about="opportunity2">
+		<ecos:name>Opportunity2</ecos:name>
+		<ecos:detail>An awesome opportunity</ecos:detail>
+		<gsi:contractor>Global Metanoia</gsi:contractor>
+		<gsi:budget>6000</gsi:budget>
+		<ecos:Address>Madrid</ecos:Address>
+		<gsi:beginDate>30-11-2012</gsi:beginDate>
+		<gsi:endDate>31-12-2013</gsi:endDate>
+		<gsi:companyReq rdf:parseType="Resource">
+			<ecos:Preference rdf:parseType="Resource">
+				<gsi:field>Ingeniería en telecomunicaciones</gsi:field>
+				<ecos:weight>Avanzado</ecos:weight>
+			</ecos:Preference>
+			<ecos:Preference rdf:parseType="Resource">
+				<gsi:field>Impresión gráfica</gsi:field>
+				<ecos:weight>Experto</ecos:weight>
+			</ecos:Preference >
+			<ecos:Preference rdf:parseType="Resource">
+				<gsi:field>Mantenimiento de equipos</gsi:field>
+				<ecos:weight>Experto</ecos:weight>
+			</ecos:Preference>
+		</gsi:companyReq>
+		<gsi:companyReq rdf:parseType="Resource">
+			<ecos:Preference rdf:parseType="Resource">
+				<gsi:field>Televisión</gsi:field>
+				<ecos:weight>Básico</ecos:weight>
+			</ecos:Preference>
+			<ecos:Preference rdf:parseType="Resource">
+				<gsi:field>Antenas colectivas</gsi:field>
+				<ecos:weight>Avanzado</ecos:weight>
+			</ecos:Preference>
+			<ecos:Preference rdf:parseType="Resource">
+				<gsi:field>Reparación telefónica</gsi:field>
+				<ecos:weight>Experto</ecos:weight>
+			</ecos:Preference>
+		</gsi:companyReq>
+		<gsi:companyReq rdf:parseType="Resource">
+			<ecos:Preference rdf:parseType="Resource">
+				<gsi:field>Ingeniero de telecomunicaciones</gsi:field>
+				<ecos:weight>Experto</ecos:weight>
+			</ecos:Preference>
+			<ecos:Preference rdf:parseType="Resource">
+				<gsi:field>Instalación telefónica</gsi:field>
+				<ecos:weight>Avanzado</ecos:weight>
+			</ecos:Preference>
+			<ecos:Preference rdf:parseType="Resource">
+				<gsi:field>Centralitas telefónicas IP</gsi:field>
+				<ecos:weight>Experto</ecos:weight>
+			</ecos:Preference>
+		</gsi:companyReq>
+	</rdf:Description>
+</rdf:RDF>

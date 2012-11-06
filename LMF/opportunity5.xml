@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+	xmlns:gsi="http://www.gsi.dit.upm.es/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:ecos="http://kmm.lboro.ac.uk/ecos/1.0#">
+	<rdf:Description rdf:about="opportunity1">
+		<ecos:name>Opportunity1</ecos:name>
+		<ecos:detail>A great opportunity</ecos:detail>
+		<gsi:contractor>GSI</gsi:contractor>
+		<gsi:budget>5000</gsi:budget>
+		<ecos:Address>Madrid</ecos:Address>
+		<gsi:beginDate>30-10-2012</gsi:beginDate>
+		<gsi:endDate>31-12-2012</gsi:endDate>
+		<gsi:companyReq rdf:parseType="Resource">
+			<ecos:Preference rdf:parseType="Resource">
+				<gsi:field>Paneles solares</gsi:field>
+				<ecos:weight>Avanzado</ecos:weight>
+			</ecos:Preference>
+			<ecos:Preference rdf:parseType="Resource">
+				<gsi:field>Calderas</gsi:field>
+				<ecos:weight>Experto</ecos:weight>
+			</ecos:Preference >
+			<ecos:Preference rdf:parseType="Resource">
+				<gsi:field>Energía fotovoltaica</gsi:field>
+				<ecos:weight>Experto</ecos:weight>
+			</ecos:Preference>
+		</gsi:companyReq>
+		<gsi:companyReq rdf:parseType="Resource">
+			<ecos:Preference rdf:parseType="Resource">
+				<gsi:field>Telefonía IP</gsi:field>
+				<ecos:weight>Básico</ecos:weight>
+			</ecos:Preference>
+			<ecos:Preference rdf:parseType="Resource">
+				<gsi:field>Automatización</gsi:field>
+				<ecos:weight>Avanzado</ecos:weight>
+			</ecos:Preference>
+			<ecos:Preference rdf:parseType="Resource">
+				<gsi:field>Pararrayos</gsi:field>
+				<ecos:weight>Experto</ecos:weight>
+			</ecos:Preference>
+		</gsi:companyReq>
+	</rdf:Description>
+</rdf:RDF>

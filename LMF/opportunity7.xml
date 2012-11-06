@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+	xmlns:gsi="http://www.gsi.dit.upm.es/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:ecos="http://kmm.lboro.ac.uk/ecos/1.0#">
+	<rdf:Description rdf:about="opportunity3">
+		<ecos:name>Opportunity3</ecos:name>
+		<ecos:detail>An incredible opportunity</ecos:detail>
+		<gsi:contractor>Ministerio de fomento</gsi:contractor>
+		<gsi:budget>7000</gsi:budget>
+		<ecos:Address>Madrid</ecos:Address>
+		<gsi:beginDate>30-12-2012</gsi:beginDate>
+		<gsi:endDate>31-12-2014</gsi:endDate>
+		<gsi:companyReq rdf:parseType="Resource">
+			<ecos:Preference rdf:parseType="Resource">
+				<gsi:field>Comunicaciones</gsi:field>
+				<ecos:weight>Avanzado</ecos:weight>
+			</ecos:Preference>
+			<ecos:Preference rdf:parseType="Resource">
+				<gsi:field>Wifi</gsi:field>
+				<ecos:weight>Experto</ecos:weight>
+			</ecos:Preference >
+			<ecos:Preference rdf:parseType="Resource">
+				<gsi:field>Diseño Web</gsi:field>
+				<ecos:weight>Experto</ecos:weight>
+			</ecos:Preference>
+		</gsi:companyReq>
+		<gsi:companyReq rdf:parseType="Resource">
+			<ecos:Preference rdf:parseType="Resource">
+				<gsi:field>Generadores eléctricos</gsi:field>
+				<ecos:weight>Básico</ecos:weight>
+			</ecos:Preference>
+			<ecos:Preference rdf:parseType="Resource">
+				<gsi:field>Programación informática</gsi:field>
+				<ecos:weight>Avanzado</ecos:weight>
+			</ecos:Preference>
+			<ecos:Preference rdf:parseType="Resource">
+				<gsi:field>Tiendas de informática</gsi:field>
+				<ecos:weight>Experto</ecos:weight>
+			</ecos:Preference>
+		</gsi:companyReq>
+		<gsi:companyReq rdf:parseType="Resource">
+			<ecos:Preference rdf:parseType="Resource">
+				<gsi:field>Academias de informática</gsi:field>
+				<ecos:weight>Experto</ecos:weight>
+			</ecos:Preference>
+			<ecos:Preference rdf:parseType="Resource">
+				<gsi:field>Redes de datos</gsi:field>
+				<ecos:weight>Avanzado</ecos:weight>
+			</ecos:Preference>
+			<ecos:Preference rdf:parseType="Resource">
+				<gsi:field>Folletos</gsi:field>
+				<ecos:weight>Experto</ecos:weight>
+			</ecos:Preference>
+		</gsi:companyReq>
+	</rdf:Description>
+</rdf:RDF>

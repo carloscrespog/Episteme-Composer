@@ -10,6 +10,7 @@
  <link rel="stylesheet" href="css/layout.css" type="text/css" media="screen">
  <link href="css/smart_wizard.css" rel="stylesheet" type="text/css">
  <link href="css/jquery-ui-1.8.22.custom.css" rel="stylesheet" type="text/css">
+ <link href="css/jquery.rating.css" rel="stylesheet" type="text/css">
 
 
  <title>Asistente de creación de ofertas</title>
@@ -19,13 +20,15 @@
  <script type="text/javascript" src="js/jquery.wizard.user.js"></script>
  <script type="text/javascript" src="js/jquery.smartWizard-2.0.min.js"></script>    
   <script type="text/javascript" src="js/knockout-2.1.0.js"></script>  
-
+<script type="text/javascript" src="js/knockout.mapping.js"></script>
+<script type="text/javascript" src="js/jquery.rating.js"></script>
 </head>
 
 <body>
 
   <div id="container">
-
+    <!-- <label for="autocomplete">Select a programming language: </label>
+    <input id="autocomplete"> -->
     <div id="top-bar">
       <img class="left logo" src="images/episteme_logo.png" />
       <br class="clear" />
@@ -73,6 +76,10 @@
       <input type="text" name="offerName" value="" class="txtBox" placeholder="Introduzca el nombre de su oferta" data-bind="value: offerName">
     </div>
     <div class="skill-level-closure">
+      <label for="offerLogo">Logo para la oferta:  </label>
+      <input type="text" name="offerLogo" value="" class="txtBox" placeholder="Introduzca el logo para su oferta" data-bind="value: offerLogo">
+    </div>
+    <div class="skill-level-closure">
       <label id="wizLabelDescription" for="description">Descripción de la oferta:  </label>
       <textArea id="wizDescription" name="description" value="" class="txtBox" placeholder="Introduzca la descripción de su oferta" data-bind="value: description"></textArea>
 
@@ -110,7 +117,7 @@
         <tr>
           <th>Compañía <span data-bind= "text: $index()+1"></span></th>
           <th>Habilidad</th>
-          <th>Peso </th>
+          <th>Nivel </th>
         </tr>
       </thead>
       <tbody data-bind="foreach: $data">
@@ -125,9 +132,8 @@
       <thead>
         <tr>
           <th><div id="new_offer_entry" class="add-arrow" title="Añade requisito"></div></th>
-          <th>Sector</th>
           <th>Habilidad</th>
-          <th>Peso ( Restante: <span id="weightLeft" data-bind="text: weightLeft"></span> % )</th>
+          <th>Nivel de experiencia</th>
         </tr>
       </thead>
       <tbody>
@@ -136,23 +142,15 @@
             Requisito 1
           </th>
           <td >
-
-
-            <select  class="sector" name="activity" >
-              <option value=" "> - </option>
-            </select>
+            <input class="activity">        
           </td>
           <td>
-            <select  class="activity" name="activity" >
-              <option value=" "> - </option>
-
+            <select class="rating">
+              <option value="0">Básico</option>
+              <option value="1" selected="selected">Experto</option>
+              <option value="2">Avanzado</option>
             </select>
-          </td>
-          <td>
-            <div >
-              <div class="weightSlider" style="display:inline-block"></div>
-              <input type="text" class="weightAmount" />
-            </div>
+            <span class="ratingText"></span>
           </td>
           
         </tr>
@@ -201,6 +199,7 @@
   <img class="left logo" src="images/gsi_logo_gray.png" />
   <img class="left logo" src="images/GlobalMetanoia_logo_gray.png" />
   <div class="clear"></div>
+  
 </div><!-- end footer -->
 
 </div>
